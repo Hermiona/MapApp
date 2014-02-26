@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<points>
+    <point>
+        <type>mosque</type>
+        <name>Someone name</name>
+        <description>Someone description</description>
+        <pointx>42.8946</pointx>
+        <pointy>74.6079</pointy>
+    </point>
+    <point>
+        <type>mosque</type>
+        <name>Someone name</name>
+        <description>Someone description</description>
+        <pointx>42.87923</pointx>
+        <pointy>74.57251</pointy>
+    </point>
+    <point>
+        <type>mosque</type>
+        <name>Someone name</name>
+        <description>Someone description</description>
+        <pointx>42.87611</pointx>
+        <pointy>74.59225</pointy>
+    </point>
+    <point>
+        <type>mosque</type>
+        <name>Someone name</name>
+        <description>Someone description</description>
+        <pointx>42.86939</pointx>
+        <pointy>74.62152</pointy>
+    </point>
+    <point>
+        <type>mosque</type>
+        <name>Someone name</name>
+        <description>Someone description</description>
+        <pointx>42.88565</pointx>
+        <pointy>74.61538</pointy>
+    </point>
+</points>
