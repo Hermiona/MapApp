@@ -1,31 +1,24 @@
 package com.example.MapApp;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.CursorLoader;
 import android.content.res.XmlResourceParser;
-import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.provider.Telephony;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
-import org.osmdroid.ResourceProxy;
-import org.osmdroid.api.IGeoPoint;
-import org.osmdroid.api.IMapView;
+import com.example.MapApp.Main.XmlReader;
+import org.osmdroid.bonuspack.overlays.Marker;
+import org.osmdroid.bonuspack.overlays.Polyline;
+import org.osmdroid.bonuspack.routing.*;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
-import org.osmdroid.views.overlay.ItemizedIconOverlay;
-import org.osmdroid.views.overlay.ItemizedOverlay;
 import org.osmdroid.views.overlay.OverlayItem;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,31 +26,27 @@ public class MyActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
-    public static MapView mMap;
+    public static MapView map;
+    public final int XMLGeoPointsCount = 5;
+    public static float[][] geoPoints;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        createMapViewAndSetParameters();
+        setStartPointPosition();
 
-        final RelativeLayout relativeLayout = new RelativeLayout(this); // разметка
-        mMap = new MapView(this, 256); // наша карта
+        XmlReader xmlReader = new XmlReader(getResources().getXml(R.xml.geopoints));
+        try {
+            xmlReader.readPrayerPlaceListFromXML();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        }
 
-        //разрешаем встроенные кнопки изменения масштаба
-
-        mMap.setBuiltInZoomControls(true);
-        // добавим карту в разметку
-        relativeLayout.addView(mMap, new RelativeLayout.LayoutParams(MapView.LayoutParams.FILL_PARENT,
-                MapView.LayoutParams.FILL_PARENT));
-        setContentView(relativeLayout);
-        mMap.setUseDataConnection(false);
-
-        mMap.setTileSource(TileSourceFactory.MAPNIK);
-        mMap.getController().setZoom(12);
-
-        GeoPoint p = new GeoPoint(42.8946, 74.6079);
-        mMap.getController().animateTo(p);
 
         ArrayList items = new ArrayList();
 //        items.add(new OverlayItem("Казань", "Татарстан", new GeoPoint(42.8946, 74.6079)));
@@ -66,7 +55,8 @@ public class MyActivity extends Activity {
 //        items.add(new OverlayItem("ie","Central Mosque","this is description", new GeoPoint(42.86939, 74.62152)));
 
         try {
-            items = getEventsFromAnXML();
+            geoPoints = getGeoPointsFromXML();
+            items = getOverlayItemArrayListFromArrayFloat(geoPoints);
         } catch (XmlPullParserException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -77,81 +67,86 @@ public class MyActivity extends Activity {
         //
         CustomItemizedOverlay MyLocationOverlay = new CustomItemizedOverlay(this, items);
 
-        mMap.getOverlays().add(MyLocationOverlay);
+        map.getOverlays().add(MyLocationOverlay);
 
-        mMap.setOnClickListener(new View.OnClickListener() {
+        map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    float[][] geoPoints = getGeoPointsFromXML();
-                    float[] absPoints = new float[10];
-                    int placeNumber = 0;
-                    float minPlace = 0;
-                    for (int i = 0; i < geoPoints.length; i++){
-                        absPoints[i] = Math.abs(geoPoints[i][0] - CustomItemizedOverlay.latitude) + Math.abs(geoPoints[i][1] - CustomItemizedOverlay.longitude);
-                        if(minPlace == 0 || minPlace > absPoints[i]){
-                            minPlace = absPoints[i];
-                            placeNumber = i;
-                        }
+                float[] absPoints = new float[XMLGeoPointsCount];
+                int placeNumber = 0;
+                float minPlace = 0;
+                for (int i = 0; i < geoPoints.length; i++) {
+                    absPoints[i] = Math.abs(geoPoints[i][0] - CustomItemizedOverlay.latitude) + Math.abs(geoPoints[i][1] - CustomItemizedOverlay.longitude);
+                    if (minPlace == 0 || minPlace > absPoints[i]) {
+                        minPlace = absPoints[i];
+                        placeNumber = i;
                     }
-                    ArrayList nearPlace = new ArrayList();
-                    nearPlace.add(new OverlayItem("", "", new GeoPoint(geoPoints[placeNumber][0], geoPoints[placeNumber][1])));
-                    //nearPlace.add(new OverlayItem("", "", new GeoPoint(CustomItemizedOverlay.latitude, CustomItemizedOverlay.longitude)));
-                    //CustomItemizedOverlay MyLocationOverlay = new CustomItemizedOverlay(null, nearPlace);
-                    addPoint(nearPlace);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (XmlPullParserException e) {
-                    e.printStackTrace();
                 }
+                ArrayList nearPlace = new ArrayList();
+
+                GeoPoint nearPoint = new GeoPoint(geoPoints[placeNumber][0], geoPoints[placeNumber][1]);
+                GeoPoint myPosition = new GeoPoint(CustomItemizedOverlay.latitude, CustomItemizedOverlay.longitude);
+
+                nearPlace.add(new OverlayItem("", "", nearPoint));
+                nearPlace.add(new OverlayItem("", "", myPosition));
+                map.getOverlays().add(new CustomItemizedOverlay(map.getContext(), nearPlace));
+                map.invalidate();
             }
         });
+    }
+
+    public void createMapViewAndSetParameters(){
+        final RelativeLayout relativeLayout = new RelativeLayout(this); // разметка
+        map = new MapView(this, 256); // наша карта
+
+        //разрешаем встроенные кнопки изменения масштаба
+
+        map.setBuiltInZoomControls(true);
+        map.setMultiTouchControls(true);
+        // добавим карту в разметку
+        relativeLayout.addView(map, new RelativeLayout.LayoutParams(MapView.LayoutParams.FILL_PARENT,
+                MapView.LayoutParams.FILL_PARENT));
+        setContentView(relativeLayout);
+        map.setUseDataConnection(false);
+
+        map.setTileSource(TileSourceFactory.MAPNIK);
+        map.getController().setZoom(12);
+
+
 
     }
 
-    public void addPoint(List items){
-        mMap.getOverlays().add(new CustomItemizedOverlay(this, items));
+    public void setStartPointPosition(){
+
+        GeoPoint startPoint = new GeoPoint(42.8800, 74.6100);
+        map.getController().setCenter(startPoint);
+
+        final Marker startMarker = new Marker(map);
+        startMarker.setPosition(startPoint);
+        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+        map.getOverlays().add(startMarker);
+
+        startMarker.setIcon(getResources().getDrawable(R.drawable.marker_destination));
+        startMarker.setTitle("Start point");
+        map.invalidate();
     }
 
-    private ArrayList getEventsFromAnXML()
-            throws XmlPullParserException, IOException
+    private ArrayList getOverlayItemArrayListFromArrayFloat(float[][] geoPoints)
     {
         ArrayList items = new ArrayList();
-
-        Double pointx = 0.0;
-        Double pointy = 0.0;
-        XmlResourceParser xpp = getResources().getXml(R.xml.geopoints);
-        xpp.next();
-        int eventType = xpp.getEventType();
-        while (eventType != XmlPullParser.END_DOCUMENT)
-        {
-            if(eventType == XmlPullParser.START_TAG)
-            {
-                String xpp_name = xpp.getName();
-                if("pointx".hashCode() == xpp_name.hashCode()){
-                    xpp.next();
-                    String str_pointx = xpp.getText().trim();
-                    pointx = Double.parseDouble(str_pointx);
-                }
-                else if("pointy".hashCode() == xpp_name.hashCode()){
-                    xpp.next();
-                    pointy = Double.parseDouble(xpp.getText());
-
-                    items.add(new OverlayItem("some title", "some snippet", new GeoPoint(pointx, pointy)));
-                }
-            }
-            eventType = xpp.next();
+        for(int i = 0; i < geoPoints.length; i++){
+            items.add(new OverlayItem("Казань", "Татарстан", new GeoPoint(geoPoints[i][0], geoPoints[i][1])));
         }
         return items;
     }
 
     public void getNearestPoints(float latitude, float longitude){
-        MyActivity.mMap.getOverlays().clear();
+        MyActivity.map.getOverlays().clear();
     }
 
     float[][] getGeoPointsFromXML() throws IOException, XmlPullParserException
     {
-        float[][] items = new float[10][2];
+        float[][] items = new float[XMLGeoPointsCount][2];
 
         XmlResourceParser xpp = getResources().getXml(R.xml.geopoints);
         xpp.next();
@@ -162,6 +157,13 @@ public class MyActivity extends Activity {
             if(eventType == XmlPullParser.START_TAG)
             {
                 String xpp_name = xpp.getName();
+                if(xpp_name.equals("point")){
+                    String pt = xpp.getText();
+                    xpp.next();
+                    String pnt = xpp.getText();
+                    xpp.next();
+                    String pnt2 = xpp.getText();
+                }
                 if("pointx".hashCode() == xpp_name.hashCode()){
                     xpp.next();
                     String str_pointx = xpp.getText().trim();

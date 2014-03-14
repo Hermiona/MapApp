@@ -1,14 +1,10 @@
 package com.example.MapApp;
 
 import android.content.Context;
-import android.graphics.Point;
 import android.view.MotionEvent;
-import com.google.common.collect.Lists;
-import org.osmdroid.api.IMapView;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.ItemizedIconOverlay;
-import org.osmdroid.views.overlay.OverlayItem;
 
 import java.util.List;
 
@@ -32,8 +28,8 @@ public class CustomItemizedOverlay extends ItemizedIconOverlay {
         GeoPoint tappedGeoPoint = (GeoPoint) projection.fromPixels(coordinateX, coordinateY);
         latitude = (float)tappedGeoPoint.getLatitude();
         longitude = (float)tappedGeoPoint.getLongitude();
-        MyActivity.mMap.getOverlays().clear();
-        MyActivity.mMap.callOnClick();
+        MyActivity.map.getOverlays().clear();
+        MyActivity.map.callOnClick();
         return true;//super.onSingleTapConfirmed(event, mapView);
     }
 }

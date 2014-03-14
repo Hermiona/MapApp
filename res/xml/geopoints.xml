@@ -3,13 +3,15 @@
 <points>
     <point>
         <type>mosque</type>
+        <gender>male</gender>
         <name>Someone name</name>
         <description>Someone description</description>
         <pointx>42.8946</pointx>
         <pointy>74.6079</pointy>
     </point>
     <point>
-        <type>mosque</type>
+        <type>prayerroom</type>
+        <gender>female</gender>
         <name>Someone name</name>
         <description>Someone description</description>
         <pointx>42.87923</pointx>
@@ -17,6 +19,7 @@
     </point>
     <point>
         <type>mosque</type>
+        <gender>joint</gender>
         <name>Someone name</name>
         <description>Someone description</description>
         <pointx>42.87611</pointx>
@@ -24,13 +27,15 @@
     </point>
     <point>
         <type>mosque</type>
+        <gender>undefined</gender>
         <name>Someone name</name>
         <description>Someone description</description>
         <pointx>42.86939</pointx>
         <pointy>74.62152</pointy>
     </point>
     <point>
-        <type>mosque</type>
+        <type>prayerroom</type>
+        <gender>male</gender>
         <name>Someone name</name>
         <description>Someone description</description>
         <pointx>42.88565</pointx>
