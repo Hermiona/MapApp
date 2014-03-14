@@ -11,13 +11,13 @@ import java.util.Collections;
  */
 public class PointCalculates {
 
-    public static ArrayList<PrayerPlace> prayerPlaceArrayList;
+    public ArrayList<PrayerPlace> prayerPlaceArrayList;
 
     public PointCalculates(ArrayList arrayList){
         this.prayerPlaceArrayList = arrayList;
     }
 
-    public static ArrayList sortPointsFromMyPosition(){
+    public ArrayList sortPointsFromMyPosition(){
         Collections.sort(prayerPlaceArrayList);
         return prayerPlaceArrayList;
     }

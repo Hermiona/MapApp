@@ -61,11 +61,11 @@ public class XmlReader {
 
                 doXppNext(xpp, 3);
                 String latitudeString = xpp.getText().trim();
-                prayerPlace.latitude = Float.parseFloat(latitudeString);
+                prayerPlace.latitude = Double.parseDouble(latitudeString);
 
                 doXppNext(xpp, 3);
                 String longitudeString = xpp.getText().trim();
-                prayerPlace.longitude = Float.parseFloat(longitudeString);
+                prayerPlace.longitude = Double.parseDouble(longitudeString);
 
                 doXppNext(xpp, 1);
                 eventType = xpp.next();

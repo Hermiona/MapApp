@@ -1,6 +1,5 @@
 package com.example.MapApp.PrayerPlace;
 
-import com.example.MapApp.CustomItemizedOverlay;
 import com.example.MapApp.Main.MyPosition;
 import com.example.MapApp.Main.Point;
 
@@ -13,24 +12,24 @@ public class PrayerPlace implements Point, Comparable {
     public String description;
     public Type prayerPlaceType;
     public Gender prayerPlaceGender;
-    public float latitude;
-    public float longitude;
+    public double latitude;
+    public double longitude;
 
     @Override
-    public float getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
     @Override
-    public float getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
     @Override
     public int compareTo(Object obj) {
         PrayerPlace temp = (PrayerPlace)obj;
-        float thisDistance = Math.abs(MyPosition.latitude - this.latitude) + Math.abs(MyPosition.longitude - this.longitude);
-        float tempDistance = Math.abs(MyPosition.latitude - temp.latitude) + Math.abs(MyPosition.longitude - temp.longitude);
+        double thisDistance = Math.abs(MyPosition.latitude - this.latitude) + Math.abs(MyPosition.longitude - this.longitude);
+        double tempDistance = Math.abs(MyPosition.latitude - temp.latitude) + Math.abs(MyPosition.longitude - temp.longitude);
         if(thisDistance > tempDistance){
             return 1;
         }

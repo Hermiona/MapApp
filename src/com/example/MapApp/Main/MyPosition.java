@@ -5,16 +5,16 @@ package com.example.MapApp.Main;
  */
 public class MyPosition implements Point{
 
-    public static float latitude;
-    public static float longitude;
+    public static double latitude;
+    public static double longitude;
 
     @Override
-    public float getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
     @Override
-    public float getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 }

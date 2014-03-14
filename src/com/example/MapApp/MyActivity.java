@@ -1,16 +1,24 @@
 package com.example.MapApp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 import com.example.MapApp.Main.MyPosition;
 import com.example.MapApp.Main.PointCalculates;
 import com.example.MapApp.Main.XmlReader;
 import com.example.MapApp.PrayerPlace.Gender;
 import com.example.MapApp.PrayerPlace.PrayerPlace;
+import org.osmdroid.bonuspack.location.POI;
 import org.osmdroid.bonuspack.overlays.Marker;
+import org.osmdroid.bonuspack.overlays.MarkerInfoWindow;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
@@ -18,17 +26,9 @@ import org.osmdroid.views.MapView;
 import java.util.ArrayList;
 
 public class MyActivity extends Activity {
-    /**
-     * Called when the activity is first created.
-     */
-//    for example:
-//        items.add(new OverlayItem("Казань", "Татарстан", new GeoPoint(42.8946, 74.6079)));
-//        items.add(new OverlayItem("Мечеть Ош рынок", "Бишкек", new GeoPoint(42.87923, 74.57251)));
-//        items.add(new OverlayItem("намазкана BetaStores", "Бишкек", new GeoPoint(42.87611, 74.59225)));
-//        items.add(new OverlayItem("ie","Central Mosque","this is description", new GeoPoint(42.86939, 74.62152)));
-
 
     public static MapView map;
+    public ArrayList<PrayerPlace> prayerPlaceArrayList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,16 +41,14 @@ public class MyActivity extends Activity {
         XmlReader xmlReader = new XmlReader(getResources().getXml(R.xml.geopoints));
         try {
             xmlReader.readPrayerPlaceListFromXML();
+            prayerPlaceArrayList = xmlReader.getPrayerPlaceList();
         }
         catch (Exception e) {
             e.printStackTrace();
         }
 
-        drawMarkersOnMap(xmlReader.getPrayerPlaceList());
+        drawMarkersOnMap(prayerPlaceArrayList);
         map.invalidate();
-
-        PointCalculates.prayerPlaceArrayList = xmlReader.getPrayerPlaceList();
-        PointCalculates.sortPointsFromMyPosition();
     }
 
     public void createMapViewAndSetParameters(){
@@ -65,7 +63,7 @@ public class MyActivity extends Activity {
         setContentView(relativeLayout);
         map.setUseDataConnection(false);
 
-        map.setTileSource(TileSourceFactory.MAPNIK);
+        map.setTileSource(TileSourceFactory.MAPNIK);//using OpenStreetMaps
         map.getController().setZoom(12);
     }
 
@@ -96,21 +94,47 @@ public class MyActivity extends Activity {
         }
 
         @Override
+        public void setOnMarkerClickListener(OnMarkerClickListener listener) {
+            super.setOnMarkerClickListener(listener);
+            nearPrayerPlaceMarker.showInfoWindow();
+        }
+
+        @Override
         public boolean onSingleTapConfirmed(MotionEvent event, MapView mapView) {
             float coordinateX = event.getX();
             float coordinateY = event.getY();
             MapView.Projection projection = mapView.getProjection();
             GeoPoint tappedGeoPoint = (GeoPoint) projection.fromPixels(coordinateX, coordinateY);
-            MyPosition.latitude = (float)tappedGeoPoint.getLatitude();
-            MyPosition.longitude = (float)tappedGeoPoint.getLongitude();
-            MyActivity.map.getOverlays().clear();
-            PointCalculates.sortPointsFromMyPosition();
-            map.getOverlays().add(generateMarkerFromPrayerPlaceObject(PointCalculates.prayerPlaceArrayList.get(0)));
+            MyPosition.latitude = tappedGeoPoint.getLatitude();
+            MyPosition.longitude = tappedGeoPoint.getLongitude();
+
+            map.getOverlays().clear();
+
+            drawNearestPoint();
+            drawMyPosition();
+
+            map.invalidate();
+
+            return true;
+        }
+        Marker nearPrayerPlaceMarker;
+        public void drawNearestPoint(){
+            PointCalculates pointCalculates = new PointCalculates(prayerPlaceArrayList);
+            pointCalculates.sortPointsFromMyPosition();
+            ArrayList<PrayerPlace> sortedPoints = pointCalculates.prayerPlaceArrayList;
+            PrayerPlace nearPrayerPlace = sortedPoints.get(0);
+            nearPrayerPlaceMarker = generateMarkerFromPrayerPlaceObject(nearPrayerPlace);
+            map.getOverlays().add(nearPrayerPlaceMarker);
+
+            nearPrayerPlaceMarker.setInfoWindow(new MarkerInfoWindow(R.layout.bonuspack_bubble, map));
+
+            nearPrayerPlaceMarker.showInfoWindow();
+        }
+
+        public void drawMyPosition(){
             Marker tempMarker = new CustomMarker(map);
             tempMarker.setPosition(new GeoPoint(MyPosition.latitude, MyPosition.longitude));
             map.getOverlays().add(tempMarker);
-            map.invalidate();
-            return true;
         }
     }
 
@@ -125,6 +149,9 @@ public class MyActivity extends Activity {
                 break;
             case JOINT:
                 drawableIcon = getResources().getDrawable(R.drawable.marker_joint);
+                break;
+            case UNDEFINED:
+                drawableIcon = getResources().getDrawable(R.drawable.marker_undefined);
                 break;
         }
         return drawableIcon;
