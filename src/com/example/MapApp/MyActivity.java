@@ -1,13 +1,18 @@
 package com.example.MapApp;
 
 import android.app.Activity;
+import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import com.example.MapApp.Main.MyPosition;
+import com.example.MapApp.Main.PointCalculates;
 import com.example.MapApp.Main.XmlReader;
+import com.example.MapApp.PrayerPlace.Gender;
+import com.example.MapApp.PrayerPlace.PrayerPlace;
 import org.osmdroid.bonuspack.overlays.Marker;
 import org.osmdroid.bonuspack.overlays.Polyline;
 import org.osmdroid.bonuspack.routing.*;
@@ -26,6 +31,13 @@ public class MyActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
+//    for example:
+//        items.add(new OverlayItem("Казань", "Татарстан", new GeoPoint(42.8946, 74.6079)));
+//        items.add(new OverlayItem("Мечеть Ош рынок", "Бишкек", new GeoPoint(42.87923, 74.57251)));
+//        items.add(new OverlayItem("намазкана BetaStores", "Бишкек", new GeoPoint(42.87611, 74.59225)));
+//        items.add(new OverlayItem("ie","Central Mosque","this is description", new GeoPoint(42.86939, 74.62152)));
+
+
     public static MapView map;
     public final int XMLGeoPointsCount = 5;
     public static float[][] geoPoints;
@@ -41,18 +53,22 @@ public class MyActivity extends Activity {
         XmlReader xmlReader = new XmlReader(getResources().getXml(R.xml.geopoints));
         try {
             xmlReader.readPrayerPlaceListFromXML();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (XmlPullParserException e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
 
+        drawMarkersOnMap(xmlReader.getPrayerPlaceList());
+        map.invalidate();
 
+        MyPosition.latitude = (float)42.86990;
+        MyPosition.longitude = (float)74.62200;
+
+        PointCalculates pointCalculates = new PointCalculates(xmlReader.getPrayerPlaceList());
+        ArrayList<PrayerPlace> sortedPrayerPlaceArrayList = pointCalculates.sortPointsFromMyPosition();
+
+/*
         ArrayList items = new ArrayList();
-//        items.add(new OverlayItem("Казань", "Татарстан", new GeoPoint(42.8946, 74.6079)));
-//        items.add(new OverlayItem("Мечеть Ош рынок", "Бишкек", new GeoPoint(42.87923, 74.57251)));
-//        items.add(new OverlayItem("намазкана BetaStores", "Бишкек", new GeoPoint(42.87611, 74.59225)));
-//        items.add(new OverlayItem("ie","Central Mosque","this is description", new GeoPoint(42.86939, 74.62152)));
 
         try {
             geoPoints = getGeoPointsFromXML();
@@ -67,7 +83,9 @@ public class MyActivity extends Activity {
         //
         CustomItemizedOverlay MyLocationOverlay = new CustomItemizedOverlay(this, items);
 
+
         map.getOverlays().add(MyLocationOverlay);
+        */
 
         map.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +104,7 @@ public class MyActivity extends Activity {
 
                 GeoPoint nearPoint = new GeoPoint(geoPoints[placeNumber][0], geoPoints[placeNumber][1]);
                 GeoPoint myPosition = new GeoPoint(CustomItemizedOverlay.latitude, CustomItemizedOverlay.longitude);
+
 
                 nearPlace.add(new OverlayItem("", "", nearPoint));
                 nearPlace.add(new OverlayItem("", "", myPosition));
@@ -131,54 +150,31 @@ public class MyActivity extends Activity {
         map.invalidate();
     }
 
-    private ArrayList getOverlayItemArrayListFromArrayFloat(float[][] geoPoints)
-    {
-        ArrayList items = new ArrayList();
-        for(int i = 0; i < geoPoints.length; i++){
-            items.add(new OverlayItem("Казань", "Татарстан", new GeoPoint(geoPoints[i][0], geoPoints[i][1])));
+    public void drawMarkersOnMap(ArrayList<PrayerPlace> prayerPlaces){
+        for(int i = 0; i < prayerPlaces.size(); i++){
+            Marker tempMarker = new Marker(map);
+            PrayerPlace tempPrayerPlace = prayerPlaces.get(i);
+            tempMarker.setPosition(new GeoPoint(tempPrayerPlace.latitude, tempPrayerPlace.longitude));
+            tempMarker.setIcon(getMarkerIconFromGender(tempPrayerPlace.prayerPlaceGender));
+            tempMarker.setTitle(tempPrayerPlace.name);
+            tempMarker.setSubDescription(tempPrayerPlace.description);
+            map.getOverlays().add(tempMarker);
         }
-        return items;
     }
 
-    public void getNearestPoints(float latitude, float longitude){
-        MyActivity.map.getOverlays().clear();
-    }
-
-    float[][] getGeoPointsFromXML() throws IOException, XmlPullParserException
-    {
-        float[][] items = new float[XMLGeoPointsCount][2];
-
-        XmlResourceParser xpp = getResources().getXml(R.xml.geopoints);
-        xpp.next();
-        int eventType = xpp.getEventType();
-        int i = 0;
-        while (eventType != XmlPullParser.END_DOCUMENT)
-        {
-            if(eventType == XmlPullParser.START_TAG)
-            {
-                String xpp_name = xpp.getName();
-                if(xpp_name.equals("point")){
-                    String pt = xpp.getText();
-                    xpp.next();
-                    String pnt = xpp.getText();
-                    xpp.next();
-                    String pnt2 = xpp.getText();
-                }
-                if("pointx".hashCode() == xpp_name.hashCode()){
-                    xpp.next();
-                    String str_pointx = xpp.getText().trim();
-                    items[i][0] = Float.parseFloat(str_pointx);
-                }
-                else if("pointy".hashCode() == xpp_name.hashCode()){
-                    xpp.next();
-                    items[i][1] = Float.parseFloat(xpp.getText());
-                    i++;
-                }
-            }
-            eventType = xpp.next();
+    public Drawable getMarkerIconFromGender(Gender prayerPlaceGender){
+        Drawable drawableIcon = null;
+        switch (prayerPlaceGender){
+            case MALE:
+                drawableIcon = getResources().getDrawable(R.drawable.marker_male);
+                break;
+            case FEMALE:
+                drawableIcon = getResources().getDrawable(R.drawable.marker_female);
+                break;
+            case JOINT:
+                drawableIcon = getResources().getDrawable(R.drawable.marker_joint);
+                break;
         }
-        return items;
+        return drawableIcon;
     }
-
-
 }
