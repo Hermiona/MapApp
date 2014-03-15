@@ -66,7 +66,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java" line="122" class="com.example.MapApp.MyActivity.CustomMarker" package="com.example.MapApp">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java" line="116" class="com.example.MapApp.MyActivity.CustomMarker" package="com.example.MapApp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -91,54 +91,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bonuspack_bubble.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bonuspack_bubble.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/bonuspack_bubble.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="33" selection-start="559" selection-end="559" vertical-scroll-proportion="-0.0" vertical-offset="165" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="33" selection-start="559" selection-end="559" vertical-scroll-proportion="0.5851064" vertical-offset="0" max-vertical-offset="855">
+            <state line="133" column="0" selection-start="4975" selection-end="4975" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="2145">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="btn_moreinfo.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable/btn_moreinfo.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="11" selection-start="377" selection-end="377" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="195">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="moreinfo_arrow.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable/moreinfo_arrow.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="moreinfo_arrow_pressed.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable/moreinfo_arrow_pressed.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="OverlayManager.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/osmdroid/views/overlay/OverlayManager.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="19" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.0" vertical-offset="824" max-vertical-offset="1155">
+            <state line="63" column="19" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="geopoints.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="geopoints.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/xml/geopoints.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="735">
+            <state line="19" column="11" selection-start="529" selection-end="529" vertical-scroll-proportion="0.28767124" vertical-offset="180" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -147,12 +133,8 @@
       <file leaf-file-name="PrayerPlace.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/PrayerPlace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#564#565#0" expanded="true" />
-              </folding>
+            <state line="1" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="705">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,9 +143,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/PointCalculates.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="10" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="465">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +151,7 @@
       <file leaf-file-name="Type.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/Type.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="9" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -180,7 +160,7 @@
       <file leaf-file-name="Gender.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/Gender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="31" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+            <state line="10" column="31" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -214,9 +194,9 @@
         <option value="$PROJECT_DIR$/src/com/example/MapApp/Main/CustomMarker.java" />
         <option value="$PROJECT_DIR$/src/com/example/MapApp/Main/PointCalculates.java" />
         <option value="$PROJECT_DIR$/res/drawable/btn_moreinfo.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java" />
-        <option value="$PROJECT_DIR$/res/xml/geopoints.xml" />
         <option value="$PROJECT_DIR$/res/layout/bonuspack_bubble.xml" />
+        <option value="$PROJECT_DIR$/res/xml/geopoints.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java" />
       </list>
     </option>
   </component>
@@ -437,6 +417,7 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -480,19 +461,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -518,6 +486,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -643,10 +624,9 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939324" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41500765" sideWeight="0.4996066" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5003934" order="7" side_tool="true" content_ui="tabs" />
@@ -660,11 +640,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24901497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24862313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -673,13 +654,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5003934" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24862313" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24862313" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24862313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="11" side_tool="false" content_ui="tabs" />
@@ -692,8 +673,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924962" sideWeight="0.4996066" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -718,16 +699,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="41" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1875">
@@ -743,13 +714,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="45" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="390">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java">
@@ -767,13 +738,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="68" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="315">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java">
@@ -798,13 +769,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="68" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="315">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java">
@@ -906,13 +877,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.5501931" vertical-offset="0" max-vertical-offset="518">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/osmdroid/views/MapView.class">
@@ -932,30 +903,22 @@
     </entry>
     <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/content/res/Resources.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="50" selection-start="3842" selection-end="3842" vertical-scroll-proportion="0.04893964" vertical-offset="885" max-vertical-offset="2010">
-          <folding />
-        </state>
+        <state line="61" column="50" selection-start="3842" selection-end="3842" vertical-scroll-proportion="0.04893964" vertical-offset="885" max-vertical-offset="2010" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/java/util/List.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="239" selection-end="239" vertical-scroll-proportion="0.1986755" vertical-offset="0" max-vertical-offset="915">
-          <folding />
-        </state>
+        <state line="9" column="12" selection-start="239" selection-end="239" vertical-scroll-proportion="0.1986755" vertical-offset="0" max-vertical-offset="915" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/app/Activity.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="16" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.33125" vertical-offset="824" max-vertical-offset="6675">
-          <folding />
-        </state>
+        <state line="63" column="16" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.33125" vertical-offset="824" max-vertical-offset="6675" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/osmdroid/views/overlay/ItemizedOverlay.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="11" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="840">
-          <folding />
-        </state>
+        <state line="20" column="11" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/MyPosition.java">
@@ -998,11 +961,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/PrayerPlace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,9 +975,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/PointCalculates.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="10" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="465">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,33 +996,40 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/btn_moreinfo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="11" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/bonuspack_bubble.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="559" selection-end="559" vertical-scroll-proportion="-0.0" vertical-offset="165" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/osmbonuspack_v4.2.8.jar!/org/osmdroid/bonuspack/overlays/Marker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="16" selection-start="5230" selection-end="5230" vertical-scroll-proportion="0.35932204" vertical-offset="1634" max-vertical-offset="1980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="4909" selection-end="4909" vertical-scroll-proportion="0.45045045" vertical-offset="1485" max-vertical-offset="2115">
+        <state line="133" column="0" selection-start="4975" selection-end="4975" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="2145">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/geopoints.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/btn_moreinfo.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="377" selection-end="377" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/bonuspack_bubble.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="559" selection-end="559" vertical-scroll-proportion="0.5851064" vertical-offset="0" max-vertical-offset="855">
+        <state line="19" column="11" selection-start="529" selection-end="529" vertical-scroll-proportion="0.28767124" vertical-offset="180" max-vertical-offset="735">
           <folding />
         </state>
       </provider>

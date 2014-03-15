@@ -1,22 +1,16 @@
 package com.example.MapApp;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 import com.example.MapApp.Main.MyPosition;
 import com.example.MapApp.Main.PointCalculates;
 import com.example.MapApp.Main.XmlReader;
 import com.example.MapApp.PrayerPlace.Gender;
 import com.example.MapApp.PrayerPlace.PrayerPlace;
-import org.osmdroid.bonuspack.location.POI;
+import com.example.MapApp.PrayerPlace.Type;
 import org.osmdroid.bonuspack.overlays.Marker;
 import org.osmdroid.bonuspack.overlays.MarkerInfoWindow;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
@@ -82,7 +76,7 @@ public class MyActivity extends Activity {
     public Marker generateMarkerFromPrayerPlaceObject(PrayerPlace prayerPlace){
         CustomMarker tempMarker = new CustomMarker(map);
         tempMarker.setPosition(new GeoPoint(prayerPlace.latitude, prayerPlace.longitude));
-        tempMarker.setIcon(getMarkerIconFromGender(prayerPlace.prayerPlaceGender));
+        tempMarker.setIcon(getMarkerIconFromTypeAndGender(prayerPlace));
         tempMarker.setTitle(prayerPlace.name);
         tempMarker.setSubDescription(prayerPlace.description);
         return tempMarker;
@@ -127,8 +121,8 @@ public class MyActivity extends Activity {
             map.getOverlays().add(nearPrayerPlaceMarker);
 
             nearPrayerPlaceMarker.setInfoWindow(new MarkerInfoWindow(R.layout.bonuspack_bubble, map));
-
             nearPrayerPlaceMarker.showInfoWindow();
+
         }
 
         public void drawMyPosition(){
@@ -138,22 +132,24 @@ public class MyActivity extends Activity {
         }
     }
 
-    public Drawable getMarkerIconFromGender(Gender prayerPlaceGender){
+    public Drawable getMarkerIconFromTypeAndGender(PrayerPlace prayerPlace){
         Drawable drawableIcon = null;
-        switch (prayerPlaceGender){
+        String ss = "";
+        int iconId = R.drawable.marker_undefined;
+        switch (prayerPlace.prayerPlaceGender){
             case MALE:
-                drawableIcon = getResources().getDrawable(R.drawable.marker_male);
+                iconId = (prayerPlace.prayerPlaceType == Type.MOSQUE)?R.drawable.mosque_male:R.drawable.prayerroom_male;
                 break;
             case FEMALE:
-                drawableIcon = getResources().getDrawable(R.drawable.marker_female);
+                iconId = (prayerPlace.prayerPlaceType == Type.MOSQUE)?R.drawable.mosque_female:R.drawable.prayerroom_female;
                 break;
             case JOINT:
-                drawableIcon = getResources().getDrawable(R.drawable.marker_joint);
+                iconId = (prayerPlace.prayerPlaceType == Type.MOSQUE)?R.drawable.mosque_joint:R.drawable.prayerroom_joint;
                 break;
             case UNDEFINED:
-                drawableIcon = getResources().getDrawable(R.drawable.marker_undefined);
                 break;
         }
+        drawableIcon = getResources().getDrawable(iconId);
         return drawableIcon;
     }
 }
