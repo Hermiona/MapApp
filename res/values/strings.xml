@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MapApp</string>
+    <string name="menu_text">Menu</string>
+    <string name="menu">Menu</string>
+    <string name="menu_item_map">Карта</string>
+    <string name="menu_item_list">Список</string>
+    <string name="menu_item_settings">Настройки</string>
+    <string name="menu_item_help">Помощь</string>
+    <string name="menu_item_quit">Выход</string>
+    <string name="all_places">Все метки</string>
 </resources>
