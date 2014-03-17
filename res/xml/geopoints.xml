@@ -10,7 +10,7 @@
         <pointy>74.6079</pointy>
     </point>
     <point>
-        <type>prayerroom</type>
+        <type>mosque</type>
         <gender>male</gender>
         <name>Ошский рынок</name>
         <description>3-этажная мечеть</description>
@@ -34,7 +34,7 @@
         <pointy>74.62152</pointy>
     </point>
     <point>
-        <type>prayerroom</type>
+        <type>mosque</type>
         <gender>male</gender>
         <name>Мечеть</name>
         <description>Ж.Жолу-Правда</description>
