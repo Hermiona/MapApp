@@ -3,4 +3,5 @@
     <color name="title_color">#000</color>
     <color name="menu_color">#000</color>
     <color name="menu_glow">#fff</color>
+    <color name="logo_color">#0f0</color>
 </resources>

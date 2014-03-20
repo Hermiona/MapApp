@@ -60,6 +60,10 @@ public class XmlReader {
                 prayerPlace.description = descriptionString;
 
                 doXppNext(xpp, 3);
+                String addressString = xpp.getText().trim();
+                prayerPlace.address = addressString;
+
+                doXppNext(xpp, 3);
                 String latitudeString = xpp.getText().trim();
                 prayerPlace.latitude = Double.parseDouble(latitudeString);
 

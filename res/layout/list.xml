@@ -22,24 +22,35 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent">
                 <ScrollView
-                        android:id="@+id/ScrollViewAllScores"
+                        android:id="@+id/ScrollViewAllPlaces"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:scrollbars="vertical">
                     <TableLayout
-                            android:id="@+id/TableLayout_AllScores"
+                            android:id="@+id/TableLayout_AllPlaces"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
                             android:stretchColumns="*">
                     </TableLayout>
                 </ScrollView>
                 <ScrollView
-                        android:id="@+id/ScrollViewFriendScores"
+                        android:id="@+id/ScrollViewMalePlaces"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:scrollbars="vertical">
                     <TableLayout
-                            android:id="@+id/TableLayout_FriendScores"
+                            android:id="@+id/TableLayout_MalePlaces"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:stretchColumns="*"></TableLayout>
+                </ScrollView>
+                <ScrollView
+                        android:id="@+id/ScrollViewFemalePlaces"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scrollbars="vertical">
+                    <TableLayout
+                            android:id="@+id/TableLayout_FemalePlaces"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
                             android:stretchColumns="*"></TableLayout>

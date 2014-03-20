@@ -8,5 +8,10 @@
     <string name="menu_item_settings">Настройки</string>
     <string name="menu_item_help">Помощь</string>
     <string name="menu_item_quit">Выход</string>
-    <string name="all_places">Все метки</string>
+    <string name="all_places">Все места</string>
+    <string name="name">Название</string>
+    <string name="address">Адрес</string>
+    <string name="type">Тип</string>
+    <string name="male_places">Мужские</string>
+    <string name="female_places">Женские</string>
 </resources>

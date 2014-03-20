@@ -14,6 +14,7 @@ public class PrayerPlace implements Point, Comparable {
     public Gender prayerPlaceGender;
     public double latitude;
     public double longitude;
+    public String address;
 
     @Override
     public double getLatitude() {
