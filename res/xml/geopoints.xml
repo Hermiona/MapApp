@@ -15,7 +15,7 @@
         <gender>male</gender>
         <name>Ошский рынок</name>
         <description>3-этажная мечеть</description>
-        <address>ss</address>
+        <address>Бейшеналиева-Пушкина</address>
         <pointx>42.87923</pointx>
         <pointy>74.57251</pointy>
     </point>
@@ -24,7 +24,7 @@
         <gender>joint</gender>
         <name>Beta Stores</name>
         <description>4-этаж</description>
-        <address>ss</address>
+        <address>Чуй-Исанова</address>
         <pointx>42.87611</pointx>
         <pointy>74.59225</pointy>
     </point>
@@ -33,7 +33,7 @@
         <gender>joint</gender>
         <name>Central Mosque</name>
         <description>Центральная мечеть</description>
-        <address>ss</address>
+        <address>Московская-Горького</address>
         <pointx>42.86939</pointx>
         <pointy>74.62152</pointy>
     </point>
@@ -42,7 +42,7 @@
         <gender>male</gender>
         <name>Мечеть</name>
         <description>Ж.Жолу-Правда</description>
-        <address>ss</address>
+        <address>Ж.Жолу-Правда</address>
         <pointx>42.88565</pointx>
         <pointy>74.61538</pointy>
     </point>

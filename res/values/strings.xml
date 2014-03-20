@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MapApp</string>
-    <string name="menu_text">Menu</string>
+    <string name="app_name">Муслим Гид</string>
+    <string name="menu_text">Меню</string>
     <string name="menu">Menu</string>
     <string name="menu_item_map">Карта</string>
     <string name="menu_item_list">Список</string>
     <string name="menu_item_settings">Настройки</string>
     <string name="menu_item_help">Помощь</string>
     <string name="menu_item_quit">Выход</string>
-    <string name="all_places">Все места</string>
-    <string name="name">Название</string>
-    <string name="address">Адрес</string>
-    <string name="type">Тип</string>
-    <string name="male_places">Мужские</string>
-    <string name="female_places">Женские</string>
+    <string name="list_all_places">Все места</string>
+    <string name="list_place_name">Название</string>
+    <string name="list_place_address">Адрес</string>
+    <string name="list_place_type">Тип</string>
+    <string name="list_male_places_text">Мужские</string>
+    <string name="list_female_places_text">Женские</string>
+    <string name="list_gender_male_text">М</string>
+    <string name="list_gender_female_text">Ж</string>
+    <string name="list_gender_joint_text">М/Ж</string>
 </resources>
