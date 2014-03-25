@@ -46,4 +46,13 @@
         <pointx>42.88565</pointx>
         <pointy>74.61538</pointy>
     </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Усман</name>
+        <description>конечная 164</description>
+        <address>ул. Кустанайская</address>
+        <pointx>42.88327</pointx>
+        <pointy>74.51112</pointy>
+    </point>
 </points>

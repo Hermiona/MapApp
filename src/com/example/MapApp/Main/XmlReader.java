@@ -1,6 +1,7 @@
 package com.example.MapApp.Main;
 
 import android.content.res.XmlResourceParser;
+import com.example.MapApp.MapActivity;
 import com.example.MapApp.PrayerPlace.Gender;
 import com.example.MapApp.PrayerPlace.PrayerPlace;
 import com.example.MapApp.PrayerPlace.Type;

@@ -69,7 +69,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" line="62" class="com.example.MapApp.ListActivity" package="com.example.MapApp">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" line="168" class="com.example.MapApp.MapActivity$CustomMarker$1" package="com.example.MapApp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -84,7 +84,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" line="69" class="com.example.MapApp.ListActivity" package="com.example.MapApp">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" line="169" class="com.example.MapApp.MapActivity$CustomMarker$1" package="com.example.MapApp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -99,7 +99,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" line="96" class="com.example.MapApp.ListActivity" package="com.example.MapApp">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" line="166" class="com.example.MapApp.MapActivity.CustomMarker" package="com.example.MapApp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -114,7 +114,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" line="26" class="com.example.MapApp.ListActivity" package="com.example.MapApp">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" line="170" class="com.example.MapApp.MapActivity$CustomMarker$1" package="com.example.MapApp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -129,7 +129,112 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/Main/XmlReader.java" line="36" class="com.example.MapApp.Main.XmlReader" package="com.example.MapApp.Main">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" line="99" class="com.example.MapApp.ListActivity" package="com.example.MapApp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" line="93" class="com.example.MapApp.ListActivity" package="com.example.MapApp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" line="104" class="com.example.MapApp.ListActivity" package="com.example.MapApp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" line="92" class="com.example.MapApp.ListActivity" package="com.example.MapApp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" line="44" class="com.example.MapApp.MapActivity" package="com.example.MapApp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" line="45" class="com.example.MapApp.MapActivity" package="com.example.MapApp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" line="50" class="com.example.MapApp.MapActivity" package="com.example.MapApp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" line="129" class="com.example.MapApp.MapActivity.CustomMarker" package="com.example.MapApp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -154,31 +259,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MapActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MapActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="40" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="2415">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geopoints.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/xml/geopoints.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="23" selection-start="147" selection-end="147" vertical-scroll-proportion="0.24523161" vertical-offset="0" max-vertical-offset="810">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+            <state line="124" column="27" selection-start="4554" selection-end="4554" vertical-scroll-proportion="0.8135048" vertical-offset="1307" max-vertical-offset="3120">
               <folding>
-                <element signature="e#992#1000#0" expanded="true" />
+                <element signature="e#6262#6503#0" expanded="true" />
+                <element signature="e#6488#6489#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activity.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/app/Activity.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="16" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0" vertical-offset="827" max-vertical-offset="6675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Instrumentation.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/app/Instrumentation.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="121" column="0" selection-start="6391" selection-end="6391" vertical-scroll-proportion="0.0" vertical-offset="1562" max-vertical-offset="2400">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Handler.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/os/Handler.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="68" selection-start="870" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="1245">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Looper.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/os/Looper.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="16" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="555">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bonuspack_bubble.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/bonuspack_bubble.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="42" selection-start="506" selection-end="506" vertical-scroll-proportion="-2.6470587" vertical-offset="0" max-vertical-offset="840">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="48" selection-start="391" selection-end="391" vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="420">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -186,88 +331,37 @@
       <file leaf-file-name="ListActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="63" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.0" vertical-offset="1213" max-vertical-offset="2085">
+            <state line="104" column="0" selection-start="4252" selection-end="4252" vertical-scroll-proportion="0.0" vertical-offset="1457" max-vertical-offset="2640">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1186#1236#0" expanded="true" />
-                <element signature="e#1545#1601#0" expanded="true" />
-                <element signature="e#1919#1977#0" expanded="true" />
-                <element signature="e#3571#3624#0" expanded="true" />
-                <element signature="e#3668#3718#0" expanded="true" />
-                <element signature="e#3784#3837#0" expanded="true" />
-                <element signature="e#3903#3953#0" expanded="true" />
-                <element signature="e#4267#4318#0" expanded="true" />
-                <element signature="e#5204#5243#0" expanded="true" />
-                <element signature="e#5333#5374#0" expanded="true" />
-                <element signature="e#5463#5503#0" expanded="true" />
+                <element signature="e#3749#3803#0" expanded="true" />
+                <element signature="e#4185#4239#0" expanded="true" />
+                <element signature="e#4735#4786#0" expanded="true" />
+                <element signature="e#5238#5454#0" expanded="true" />
+                <element signature="e#5443#5444#0" expanded="true" />
+                <element signature="e#5497#5696#0" expanded="true" />
+                <element signature="e#5685#5686#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="Menu.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/view/Menu.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="38" selection-start="89" selection-end="89" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="390">
+            <state line="21" column="26" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XmlReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/XmlReader.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="52" selection-start="2248" selection-end="2248" vertical-scroll-proportion="0.0" vertical-offset="789" max-vertical-offset="2010">
+            <state line="12" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/list.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="29" selection-start="831" selection-end="831" vertical-scroll-proportion="1.1764706" vertical-offset="315" max-vertical-offset="1125">
-              <folding>
-                <element signature="e#431#455#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/settings.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="690" selection-end="690" vertical-scroll-proportion="-3.5294118" vertical-offset="0" max-vertical-offset="285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/menu.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="52" selection-start="755" selection-end="755" vertical-scroll-proportion="-0.21568628" vertical-offset="214" max-vertical-offset="870">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="40" selection-start="180" selection-end="180" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="225">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -297,26 +391,27 @@
         <option value="$PROJECT_DIR$/src/com/example/MapApp/Main/CustomMarker.java" />
         <option value="$PROJECT_DIR$/src/com/example/MapApp/Main/PointCalculates.java" />
         <option value="$PROJECT_DIR$/res/drawable/btn_moreinfo.xml" />
-        <option value="$PROJECT_DIR$/res/layout/bonuspack_bubble.xml" />
         <option value="$PROJECT_DIR$/src/com/example/MapApp/MyActivity.java" />
         <option value="$PROJECT_DIR$/res/color/title_color.xml" />
         <option value="$PROJECT_DIR$/res/layout/menu_item.xml" />
         <option value="$PROJECT_DIR$/res/layout/map_options.xml" />
         <option value="$PROJECT_DIR$/src/com/example/MapApp/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/MapApp/HelpActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/help.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/MapApp/MenuActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/PrayerPlace.java" />
-        <option value="$PROJECT_DIR$/src/com/example/MapApp/Main/XmlReader.java" />
         <option value="$PROJECT_DIR$/res/layout/list.xml" />
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/settings.xml" />
         <option value="$PROJECT_DIR$/res/layout/menu.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/MapApp/MenuActivity.java" />
         <option value="$PROJECT_DIR$/res/xml/geopoints.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/PrayerPlace.java" />
+        <option value="$PROJECT_DIR$/src/com/example/MapApp/Main/XmlReader.java" />
+        <option value="$PROJECT_DIR$/src/com/example/MapApp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/bonuspack_bubble.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java" />
       </list>
     </option>
   </component>
@@ -355,6 +450,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -531,14 +628,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,7 +666,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="c08081d12f312cf" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="MyAvd0" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -610,6 +723,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -635,19 +761,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -776,25 +889,25 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2214342" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41194487" sideWeight="0.4996066" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4287902" sideWeight="0.4996066" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5003934" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24862313" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32465544" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35222054" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24783635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24704957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -803,13 +916,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5003934" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24862313" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24862313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="11" side_tool="false" content_ui="tabs" />
@@ -822,8 +935,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.4996066" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924962" sideWeight="0.4996066" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -848,59 +961,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="389" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proguard-project.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="411" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MapApp.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="411" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/xmlpull/v1/XmlPullParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="8" selection-start="253" selection-end="253" vertical-scroll-proportion="0.30150753" vertical-offset="0" max-vertical-offset="1545" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/osmdroid/views/overlay/ItemizedIconOverlay.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="19" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.3313783" vertical-offset="457" max-vertical-offset="1005" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="766" selection-end="766" vertical-scroll-proportion="0.41265061" vertical-offset="223" max-vertical-offset="555" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/os/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.31085044" vertical-offset="134" max-vertical-offset="1245" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/view/GestureDetector.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215" />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/util/AttributeSet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="21" selection-start="320" selection-end="320" vertical-scroll-proportion="0.28753993" vertical-offset="0" max-vertical-offset="825" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1070" column="19" selection-start="48561" selection-end="48561" vertical-scroll-proportion="0.0" vertical-offset="15922" max-vertical-offset="17820" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/osmbonuspack_v4.2.8.jar!/org/osmdroid/bonuspack/routing/RoadManager.class">
@@ -943,37 +1006,19 @@
         <state line="20" column="11" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="840" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/MyPosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="39" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding>
-            <element signature="e#237#238#0" expanded="false" />
-            <element signature="e#268#269#0" expanded="false" />
-            <element signature="e#318#319#0" expanded="false" />
-            <element signature="e#350#351#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
+        <state line="5" column="17" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/Gender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="31" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
+        <state line="10" column="31" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/Type.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="9" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/osmdroid/views/overlay/OverlayManager.class">
@@ -996,30 +1041,12 @@
         <state line="7" column="11" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/bonuspack_bubble.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="559" selection-end="559" vertical-scroll-proportion="-0.0" vertical-offset="165" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/osmbonuspack_v4.2.8.jar!/org/osmdroid/bonuspack/overlays/Marker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="16" selection-start="5230" selection-end="5230" vertical-scroll-proportion="0.35932204" vertical-offset="1634" max-vertical-offset="1980" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/mosque_joint.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/menu_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="45" selection-start="457" selection-end="457" vertical-scroll-proportion="-2.9411764" vertical-offset="0" max-vertical-offset="285">
           <folding>
@@ -1027,28 +1054,26 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/PointCalculates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/PointCalculates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="10" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="465" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="9" selection-start="0" selection-end="312" vertical-scroll-proportion="-1.7647059" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/help.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/help.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="122" selection-start="379" selection-end="379" vertical-scroll-proportion="-1.4705882" vertical-offset="0" max-vertical-offset="180">
           <folding>
@@ -1056,12 +1081,8 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/HelpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -1073,33 +1094,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/map_options.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/PrayerPlace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/app/Activity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="16" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.33229813" vertical-offset="823" max-vertical-offset="6675">
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
@@ -1109,101 +1114,203 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="40" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="2415">
+        <state line="4" column="40" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="52" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="83" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/osmdroid/views/overlay/Overlay.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="178" selection-end="178" vertical-scroll-proportion="-1.7236025" vertical-offset="630" max-vertical-offset="1005" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/osmdroid/views/overlay/SafeDrawOverlay.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="74" selection-start="230" selection-end="230" vertical-scroll-proportion="0.23291926" vertical-offset="0" max-vertical-offset="405" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/osmbonuspack_v4.2.8.jar!/org/osmdroid/bonuspack/overlays/Marker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="73" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1995">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/HelpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/geopoints.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="29" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/XmlReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="52" selection-start="2248" selection-end="2248" vertical-scroll-proportion="0.0" vertical-offset="789" max-vertical-offset="2010">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="44" column="60" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.0" vertical-offset="365" max-vertical-offset="1890">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MenuActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/PrayerPlace/PrayerPlace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="660">
-          <folding>
-            <element signature="e#992#1000#0" expanded="true" />
-          </folding>
+        <state line="57" column="60" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1185">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/Main/MyPosition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="40" selection-start="180" selection-end="180" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="225">
+        <state line="5" column="39" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="29" selection-start="831" selection-end="831" vertical-scroll-proportion="1.1764706" vertical-offset="315" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/view/Menu.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="26" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="186" column="19" selection-start="10256" selection-end="10256" vertical-scroll-proportion="-0.53697747" vertical-offset="2942" max-vertical-offset="17820">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="38" selection-start="89" selection-end="89" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="390">
+        <state line="8" column="48" selection-start="391" selection-end="391" vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/settings.xml">
-      <provider editor-type-id="android-designer">
+    <entry file="file://$PROJECT_DIR$/res/drawable/bonuspack_bubble_medium.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/bonuspack_bubble_big.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/bonuspack_bubble.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="690" selection-end="690" vertical-scroll-proportion="-3.5294118" vertical-offset="0" max-vertical-offset="285">
+        <state line="9" column="42" selection-start="506" selection-end="506" vertical-scroll-proportion="-2.6470587" vertical-offset="0" max-vertical-offset="840">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/menu.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="52" selection-start="755" selection-end="755" vertical-scroll-proportion="-0.21568628" vertical-offset="214" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="831" selection-end="831" vertical-scroll-proportion="1.1764706" vertical-offset="315" max-vertical-offset="1125">
+        <state line="12" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <folding>
-            <element signature="e#431#455#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="16" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0" vertical-offset="827" max-vertical-offset="6675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/app/Instrumentation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="0" selection-start="6391" selection-end="6391" vertical-scroll-proportion="0.0" vertical-offset="1562" max-vertical-offset="2400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/os/Handler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="68" selection-start="870" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/adt-bundle-linux-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/os/Looper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="16" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="555">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/ListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="63" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.0" vertical-offset="1213" max-vertical-offset="2085">
+        <state line="104" column="0" selection-start="4252" selection-end="4252" vertical-scroll-proportion="0.0" vertical-offset="1457" max-vertical-offset="2640">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1186#1236#0" expanded="true" />
-            <element signature="e#1545#1601#0" expanded="true" />
-            <element signature="e#1919#1977#0" expanded="true" />
-            <element signature="e#3571#3624#0" expanded="true" />
-            <element signature="e#3668#3718#0" expanded="true" />
-            <element signature="e#3784#3837#0" expanded="true" />
-            <element signature="e#3903#3953#0" expanded="true" />
-            <element signature="e#4267#4318#0" expanded="true" />
-            <element signature="e#5204#5243#0" expanded="true" />
-            <element signature="e#5333#5374#0" expanded="true" />
-            <element signature="e#5463#5503#0" expanded="true" />
+            <element signature="e#3749#3803#0" expanded="true" />
+            <element signature="e#4185#4239#0" expanded="true" />
+            <element signature="e#4735#4786#0" expanded="true" />
+            <element signature="e#5238#5454#0" expanded="true" />
+            <element signature="e#5443#5444#0" expanded="true" />
+            <element signature="e#5497#5696#0" expanded="true" />
+            <element signature="e#5685#5686#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/geopoints.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/example/MapApp/MapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="147" selection-end="147" vertical-scroll-proportion="0.24523161" vertical-offset="0" max-vertical-offset="810">
-          <folding />
+        <state line="124" column="27" selection-start="4554" selection-end="4554" vertical-scroll-proportion="0.8135048" vertical-offset="1307" max-vertical-offset="3120">
+          <folding>
+            <element signature="e#6262#6503#0" expanded="true" />
+            <element signature="e#6488#6489#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

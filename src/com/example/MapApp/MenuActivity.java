@@ -40,6 +40,8 @@ public class MenuActivity extends Activity {
                     startActivity(new Intent(MenuActivity.this, ListActivity.class));
                 } else if(clickedItemText.equalsIgnoreCase(getResources().getString(R.string.menu_item_settings))){
                     startActivity(new Intent(MenuActivity.this, SettingsActivity.class));
+                } else if(clickedItemText.equalsIgnoreCase(getResources().getString(R.string.menu_item_help))){
+                    startActivity(new Intent(MenuActivity.this, HelpActivity.class));
                 } else if (clickedItemText.equalsIgnoreCase(getResources().getString(R.string.menu_item_quit))){
                     finish();
                 }

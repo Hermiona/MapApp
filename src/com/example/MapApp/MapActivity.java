@@ -11,9 +11,9 @@ import android.widget.RelativeLayout;
 import com.example.MapApp.Main.MyPosition;
 import com.example.MapApp.Main.PointCalculates;
 import com.example.MapApp.Main.XmlReader;
-import com.example.MapApp.PrayerPlace.Gender;
 import com.example.MapApp.PrayerPlace.PrayerPlace;
 import com.example.MapApp.PrayerPlace.Type;
+import org.osmdroid.bonuspack.overlays.InfoWindow;
 import org.osmdroid.bonuspack.overlays.Marker;
 import org.osmdroid.bonuspack.overlays.MarkerInfoWindow;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
@@ -33,8 +33,25 @@ public class MapActivity extends Activity {
         setContentView(R.layout.main);
 
         createMapViewAndSetParameters();
-        setStartPointPosition();
+        readPointsFromXml();
 
+        PrayerPlace prayerPlaceFromList = MainActivity.prayerPlaceFromList;
+        MainActivity.prayerPlaceFromList = null;
+
+        if(prayerPlaceFromList == null){
+            setStartPointPosition(42.8800, 74.6100);
+            drawMarkersOnMap(prayerPlaceArrayList);
+        } else{
+            Marker markerFromList = generateMarkerFromPrayerPlaceObject(prayerPlaceFromList);
+            map.getOverlays().add(markerFromList);
+            setStartPointPosition(prayerPlaceFromList.latitude, prayerPlaceFromList.longitude);
+            markerFromList.showInfoWindow();
+        }
+
+        map.invalidate();
+    }
+
+    void readPointsFromXml(){
         XmlReader xmlReader = new XmlReader(getResources().getXml(R.xml.geopoints));
         try {
             xmlReader.readPrayerPlaceListFromXML();
@@ -43,9 +60,6 @@ public class MapActivity extends Activity {
         catch (Exception e) {
             e.printStackTrace();
         }
-
-        drawMarkersOnMap(prayerPlaceArrayList);
-        map.invalidate();
     }
 
     @Override
@@ -76,14 +90,17 @@ public class MapActivity extends Activity {
         relativeLayout.addView(map, new RelativeLayout.LayoutParams(MapView.LayoutParams.FILL_PARENT,
                 MapView.LayoutParams.FILL_PARENT));
         setContentView(relativeLayout);
-        map.setUseDataConnection(false);
+//        map.setUseDataConnection(false);
+        map.setClickable(true);
 
         map.setTileSource(TileSourceFactory.MAPNIK);//using OpenStreetMaps
         map.getController().setZoom(12);
+        map.setMaxZoomLevel(12);
+
     }
 
-    public void setStartPointPosition(){
-        GeoPoint startPoint = new GeoPoint(42.8800, 74.6100);
+    public void setStartPointPosition(double latittude, double longitude){
+        GeoPoint startPoint = new GeoPoint(latittude, longitude);
         map.getController().setCenter(startPoint);
     }
 
@@ -99,7 +116,7 @@ public class MapActivity extends Activity {
         tempMarker.setPosition(new GeoPoint(prayerPlace.latitude, prayerPlace.longitude));
         tempMarker.setIcon(getMarkerIconFromTypeAndGender(prayerPlace));
         tempMarker.setTitle(prayerPlace.name);
-        tempMarker.setSubDescription(prayerPlace.description);
+        tempMarker.setSubDescription(prayerPlace.address + "\n" + prayerPlace.description);
         return tempMarker;
     }
 
@@ -111,7 +128,6 @@ public class MapActivity extends Activity {
         @Override
         public void setOnMarkerClickListener(OnMarkerClickListener listener) {
             super.setOnMarkerClickListener(listener);
-            nearPrayerPlaceMarker.showInfoWindow();
         }
 
         @Override
@@ -120,8 +136,13 @@ public class MapActivity extends Activity {
             float coordinateY = event.getY();
             MapView.Projection projection = mapView.getProjection();
             GeoPoint tappedGeoPoint = (GeoPoint) projection.fromPixels(coordinateX, coordinateY);
-            MyPosition.latitude = tappedGeoPoint.getLatitude();
-            MyPosition.longitude = tappedGeoPoint.getLongitude();
+            drawNearestPointFromMyPosition(tappedGeoPoint);
+            return true;
+        }
+
+        private void drawNearestPointFromMyPosition(GeoPoint myPosition){
+            MyPosition.latitude = myPosition.getLatitude();
+            MyPosition.longitude = myPosition.getLongitude();
 
             map.getOverlays().clear();
 
@@ -129,9 +150,8 @@ public class MapActivity extends Activity {
             drawMyPosition();
 
             map.invalidate();
-
-            return true;
         }
+
         Marker nearPrayerPlaceMarker;
         public void drawNearestPoint(){
             PointCalculates pointCalculates = new PointCalculates(prayerPlaceArrayList);
@@ -144,12 +164,39 @@ public class MapActivity extends Activity {
             nearPrayerPlaceMarker.setInfoWindow(new MarkerInfoWindow(R.layout.bonuspack_bubble, map));
             nearPrayerPlaceMarker.showInfoWindow();
 
+            nearPrayerPlaceMarker.setOnMarkerClickListener(new OnMarkerClickListener() {
+                @Override
+                public boolean onMarkerClick(Marker marker, MapView mapView) {
+                    String ss = "hi msn";
+                    return true;
+                }
+            });
+
+            nearPrayerPlaceMarker.setDraggable(true);
+
         }
 
         public void drawMyPosition(){
-            Marker tempMarker = new CustomMarker(map);
-            tempMarker.setPosition(new GeoPoint(MyPosition.latitude, MyPosition.longitude));
-            map.getOverlays().add(tempMarker);
+            Marker myPositionMarker = new CustomMarker(map);
+            myPositionMarker.setDraggable(true);
+            myPositionMarker.setPosition(new GeoPoint(MyPosition.latitude, MyPosition.longitude));
+            map.getOverlays().add(myPositionMarker);
+            myPositionMarker.setOnMarkerDragListener(new OnMarkerDragListener() {
+                @Override
+                public void onMarkerDrag(Marker marker) {
+
+                }
+
+                @Override
+                public void onMarkerDragEnd(Marker marker) {
+                    drawNearestPointFromMyPosition(marker.getPosition());
+                }
+
+                @Override
+                public void onMarkerDragStart(Marker marker) {
+
+                }
+            });
         }
     }
 

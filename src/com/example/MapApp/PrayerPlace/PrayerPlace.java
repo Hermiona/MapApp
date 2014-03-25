@@ -1,7 +1,9 @@
 package com.example.MapApp.PrayerPlace;
 
+import android.content.res.Resources;
 import com.example.MapApp.Main.MyPosition;
 import com.example.MapApp.Main.Point;
+import com.example.MapApp.R;
 
 /**
  * Created by respect on 3/14/14.
@@ -38,5 +40,34 @@ public class PrayerPlace implements Point, Comparable {
             return -1;
         }
         return 0;
+    }
+
+    public String getPlaceTypeString(Resources resources){
+        String placeTypeString = "";
+        switch (prayerPlaceType){
+            case MOSQUE:
+                placeTypeString = resources.getString(R.string.type_mosque_text);
+                break;
+            case PRAYERROOM:
+                placeTypeString = resources.getString(R.string.type_prayerroom_text);
+                break;
+        }
+        return placeTypeString;
+    }
+
+    public String getPlaceGenderString(Resources resources){
+        String genderText = "";
+        switch (prayerPlaceGender){
+            case MALE:
+                genderText = resources.getString(R.string.gender_male_text);
+                break;
+            case FEMALE:
+                genderText = resources.getString(R.string.gender_female_text);
+                break;
+            case JOINT:
+                genderText = resources.getString(R.string.gender_joint_text);
+                break;
+        }
+        return genderText;
     }
 }
