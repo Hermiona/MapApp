@@ -1,6 +1,7 @@
 package com.example.MapApp.PrayerPlace;
 
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import com.example.MapApp.Main.MyPosition;
 import com.example.MapApp.Main.Point;
 import com.example.MapApp.R;
@@ -69,5 +70,25 @@ public class PrayerPlace implements Point, Comparable {
                 break;
         }
         return genderText;
+    }
+
+    public Drawable getMarkerIconFromTypeAndGender(Resources resources){
+        Drawable drawableIcon = null;
+        int iconId = R.drawable.marker_undefined;
+        switch (prayerPlaceGender){
+            case MALE:
+                iconId = (prayerPlaceType == Type.MOSQUE)?R.drawable.mosque_male:R.drawable.prayerroom_male;
+                break;
+            case FEMALE:
+                iconId = (prayerPlaceType == Type.MOSQUE)?R.drawable.mosque_female:R.drawable.prayerroom_female;
+                break;
+            case JOINT:
+                iconId = (prayerPlaceType == Type.MOSQUE)?R.drawable.mosque_joint1:R.drawable.prayerroom_joint;
+                break;
+            case UNDEFINED:
+                break;
+        }
+        drawableIcon = resources.getDrawable(iconId);
+        return drawableIcon;
     }
 }

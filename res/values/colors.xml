@@ -7,4 +7,5 @@
     <color name="list_header_color">#000</color>
     <color name="list_item_color">#000</color>
     <color name="backgroud_color">#4aff46</color>
+    <color name="divider_backgroud_color">#000</color>
 </resources>

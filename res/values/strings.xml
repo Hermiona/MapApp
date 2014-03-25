@@ -19,4 +19,5 @@
     <string name="type_mosque_text">Мечеть</string>
     <string name="type_prayerroom_text">Намазкана</string>
     <string name="list_item_context_menu_show_on_map">Показать на карте</string>
+    <string name="options_menu_clear_map">Очистить</string>
 </resources>

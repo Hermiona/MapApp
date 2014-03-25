@@ -61,9 +61,9 @@ public class ListActivity extends Activity {
         TableLayout malePlacesTable = (TableLayout) findViewById(R.id.TableLayout_MalePlaces);
         TableLayout femalePlacesTable = (TableLayout) findViewById(R.id.TableLayout_FemalePlaces);
 
-        initializeHeaderRow(allPlacesTable);
-        initializeHeaderRow(malePlacesTable);
-        initializeHeaderRow(femalePlacesTable);
+//        initializeHeaderRow(allPlacesTable);
+//        initializeHeaderRow(malePlacesTable);
+//        initializeHeaderRow(femalePlacesTable);
 
         for(int i = 0; i < prayerPlaceArrayList.size(); i++){
             PrayerPlace tempPrayerPlace = prayerPlaceArrayList.get(i);
@@ -74,14 +74,18 @@ public class ListActivity extends Activity {
                     insertPlace(malePlacesTable, tempPrayerPlace, i);
                     break;
                 case FEMALE:
-                    insertPlaceRow(femalePlacesTable, tempPrayerPlace);
+//                    insertPlaceRow(femalePlacesTable, tempPrayerPlace);
+                    insertPlace(femalePlacesTable, tempPrayerPlace, i);
                     break;
                 case JOINT:
 //                    insertPlaceRow(malePlacesTable, tempPrayerPlace);
-                    insertPlaceRow(femalePlacesTable, tempPrayerPlace);
+//                    insertPlaceRow(femalePlacesTable, tempPrayerPlace);
+                    insertPlace(malePlacesTable, tempPrayerPlace, i);
+                    insertPlace(femalePlacesTable, tempPrayerPlace, i);
             }
 
-            insertPlaceRow(allPlacesTable, tempPrayerPlace);
+//            insertPlaceRow(allPlacesTable, tempPrayerPlace);
+            insertPlace(allPlacesTable, tempPrayerPlace, i);
         }
         registerForContextMenu(host);
     }
@@ -96,15 +100,10 @@ public class ListActivity extends Activity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-//        return super.onContextItemSelected(item);
-//        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
-        //  info.position will give the index of selected item
-//        int IndexSelected=info.position;
         if(item.getTitle().equals(getString(R.string.list_item_context_menu_show_on_map)))
         {
             MainActivity.prayerPlaceFromList = prayerPlaceArrayList.get(placeNumber);
             startActivity(new Intent(this, MapActivity.class));
-            // Code to execute when clicked on This Item
         }
         else
         {
@@ -114,13 +113,27 @@ public class ListActivity extends Activity {
     }
 
     private void insertPlace(TableLayout malePlacesTable, PrayerPlace prayerPlace, int placeNumber) {
+        RelativeLayout relativeLayout = new RelativeLayout(this);
+        ImageView imageViewPlaceIcon = new ImageView(this);
+        imageViewPlaceIcon.setImageDrawable(prayerPlace.getMarkerIconFromTypeAndGender(getResources()));
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
+        imageViewPlaceIcon.setLayoutParams(layoutParams);
+
+        ImageView imageViewDivider = new ImageView(this);
+        RelativeLayout.LayoutParams layoutParamsForDivider = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, 2);
+        layoutParamsForDivider.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+        imageViewDivider.setBackgroundColor(getResources().getColor(R.color.divider_backgroud_color));
+        imageViewDivider.setLayoutParams(layoutParamsForDivider);
+
         TextView textView = new TextView(this);
         textView.setTextSize(getResources().getDimension(R.dimen.list_item_size));
         textView.setTextColor(getResources().getColor(R.color.list_item_color));
-        textView.setText(prayerPlace.getPlaceTypeString(getResources()) + " - " + prayerPlace.name + "\n" + prayerPlace.address + "\n" + prayerPlace.description + "\n" + prayerPlace.getPlaceGenderString(getResources()));
+        textView.setText(getPrayerPlaceToStringAllParams(prayerPlace));
         textView.setSingleLine(false);
         textView.setId(placeNumber);
-        int ss = textView.getId();
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,14 +141,27 @@ public class ListActivity extends Activity {
                 view.showContextMenu();
             }
         });
+
         textView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
+                ListActivity.placeNumber = view.getId();
                 view.showContextMenu();
                 return true;
             }
         });
-        malePlacesTable.addView(textView);
+        relativeLayout.addView(imageViewPlaceIcon);
+        relativeLayout.addView(textView);
+        relativeLayout.addView(imageViewDivider);
+        malePlacesTable.addView(relativeLayout);
+    }
+
+    private String getPrayerPlaceToStringAllParams(PrayerPlace prayerPlace){
+        String prayerPlaceString = "";
+        prayerPlaceString += prayerPlace.getPlaceTypeString(getResources()) + " - " + prayerPlace.name + "\n";
+        prayerPlaceString += prayerPlace.address + "\n";
+        prayerPlaceString += prayerPlace.description + "\n";
+        return prayerPlaceString;
     }
 
     private void initializeHeaderRow(TableLayout placesTable) {

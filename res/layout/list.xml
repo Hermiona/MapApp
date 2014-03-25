@@ -5,7 +5,7 @@
               android:layout_height="fill_parent"
               android:background="@color/backgroud_color">
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:text="@string/menu_item_list"/>
+              android:text="@string/menu_item_list" android:visibility="invisible"/>
     <TabHost
             android:id="@+id/TabHost1"
             android:layout_width="fill_parent"
@@ -59,12 +59,4 @@
             </FrameLayout>
         </LinearLayout>
     </TabHost>
-    <ImageView
-            android:id="@+id/ImageView_footer"
-            android:src="@drawable/mosque_footer"
-            android:layout_alignParentBottom="true"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside" />
 </RelativeLayout>

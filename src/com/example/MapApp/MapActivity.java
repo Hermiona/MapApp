@@ -44,6 +44,7 @@ public class MapActivity extends Activity {
         } else{
             Marker markerFromList = generateMarkerFromPrayerPlaceObject(prayerPlaceFromList);
             map.getOverlays().add(markerFromList);
+            markerFromList.setInfoWindow(new MarkerInfoWindow(R.layout.bonuspack_bubble, map));
             setStartPointPosition(prayerPlaceFromList.latitude, prayerPlaceFromList.longitude);
             markerFromList.showInfoWindow();
         }
@@ -66,6 +67,7 @@ public class MapActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.map_options, menu);
+        menu.add(getString(R.string.options_menu_clear_map));
         menu.findItem(R.id.help_menu_item).setIntent(
                 new Intent(this, HelpActivity.class));
         menu.findItem(R.id.settings_menu_item).setIntent(
@@ -76,7 +78,11 @@ public class MapActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
-        startActivity(item.getIntent());
+        if(item.getTitle().equals(getString(R.string.options_menu_clear_map))){
+            map.getOverlays().clear();
+        } else {
+            startActivity(item.getIntent());
+        }
         return true;
     }
 

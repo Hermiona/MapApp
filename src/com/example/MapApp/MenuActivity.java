@@ -23,7 +23,7 @@ public class MenuActivity extends Activity {
                 getResources().getString(R.string.menu_item_list),
                 getResources().getString(R.string.menu_item_settings),
                 getResources().getString(R.string.menu_item_help),
-                getResources().getString(R.string.menu_item_quit)
+                getResources().getString(R.string.menu_item_quit),
         };
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.menu_item, menuListItems);
