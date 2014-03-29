@@ -13,12 +13,12 @@ import com.example.MapApp.Main.PointCalculates;
 import com.example.MapApp.Main.XmlReader;
 import com.example.MapApp.PrayerPlace.PrayerPlace;
 import com.example.MapApp.PrayerPlace.Type;
-import org.osmdroid.bonuspack.overlays.InfoWindow;
 import org.osmdroid.bonuspack.overlays.Marker;
 import org.osmdroid.bonuspack.overlays.MarkerInfoWindow;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.Overlay;
 
 import java.util.ArrayList;
 
@@ -42,14 +42,16 @@ public class MapActivity extends Activity {
             setStartPointPosition(42.8800, 74.6100);
             drawMarkersOnMap(prayerPlaceArrayList);
         } else{
-            Marker markerFromList = generateMarkerFromPrayerPlaceObject(prayerPlaceFromList);
+            CustomMarker markerFromList = generateMarkerFromPrayerPlaceObject(prayerPlaceFromList);
             map.getOverlays().add(markerFromList);
             markerFromList.setInfoWindow(new MarkerInfoWindow(R.layout.bonuspack_bubble, map));
             setStartPointPosition(prayerPlaceFromList.latitude, prayerPlaceFromList.longitude);
+            map.getController().setZoom(15);
             markerFromList.showInfoWindow();
         }
 
         map.invalidate();
+
     }
 
     void readPointsFromXml(){
@@ -68,6 +70,7 @@ public class MapActivity extends Activity {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.map_options, menu);
         menu.add(getString(R.string.options_menu_clear_map));
+        menu.add(getString(R.string.options_menu_show_all_markers));
         menu.findItem(R.id.help_menu_item).setIntent(
                 new Intent(this, HelpActivity.class));
         menu.findItem(R.id.settings_menu_item).setIntent(
@@ -79,11 +82,26 @@ public class MapActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
         if(item.getTitle().equals(getString(R.string.options_menu_clear_map))){
+            hideInfoWindowOfAllCustomMarker();
             map.getOverlays().clear();
+            drawMyPosition();
+        } else if(item.getTitle().equals(getString(R.string.options_menu_show_all_markers))){
+            drawMarkersOnMap(prayerPlaceArrayList);
         } else {
             startActivity(item.getIntent());
         }
         return true;
+    }
+
+    void hideInfoWindowOfAllCustomMarker(){
+        int overlaysCount = map.getOverlays().size();
+        for(int i = 0; i < overlaysCount; i++){
+            Overlay overlay = map.getOverlays().get(i);
+            if(overlay instanceof CustomMarker){
+                CustomMarker marker = (CustomMarker)overlay;
+                marker.hideInfoWindow();
+            }
+        }
     }
 
     public void createMapViewAndSetParameters(){
@@ -96,13 +114,13 @@ public class MapActivity extends Activity {
         relativeLayout.addView(map, new RelativeLayout.LayoutParams(MapView.LayoutParams.FILL_PARENT,
                 MapView.LayoutParams.FILL_PARENT));
         setContentView(relativeLayout);
-//        map.setUseDataConnection(false);
+        map.setUseDataConnection(true);
         map.setClickable(true);
 
         map.setTileSource(TileSourceFactory.MAPNIK);//using OpenStreetMaps
         map.getController().setZoom(12);
-        map.setMaxZoomLevel(12);
-
+        map.setMaxZoomLevel(20);
+        map.setMinZoomLevel(12);
     }
 
     public void setStartPointPosition(double latittude, double longitude){
@@ -112,12 +130,12 @@ public class MapActivity extends Activity {
 
     public void drawMarkersOnMap(ArrayList<PrayerPlace> prayerPlaces){
         for(int i = 0; i < prayerPlaces.size(); i++){
-            Marker tempMarker = generateMarkerFromPrayerPlaceObject(prayerPlaces.get(i));
+            CustomMarker tempMarker = generateMarkerFromPrayerPlaceObject(prayerPlaces.get(i));
             map.getOverlays().add(tempMarker);
         }
     }
 
-    public Marker generateMarkerFromPrayerPlaceObject(PrayerPlace prayerPlace){
+    public CustomMarker generateMarkerFromPrayerPlaceObject(PrayerPlace prayerPlace){
         CustomMarker tempMarker = new CustomMarker(map);
         tempMarker.setPosition(new GeoPoint(prayerPlace.latitude, prayerPlace.longitude));
         tempMarker.setIcon(getMarkerIconFromTypeAndGender(prayerPlace));
@@ -146,64 +164,68 @@ public class MapActivity extends Activity {
             return true;
         }
 
-        private void drawNearestPointFromMyPosition(GeoPoint myPosition){
-            MyPosition.latitude = myPosition.getLatitude();
-            MyPosition.longitude = myPosition.getLongitude();
 
-            map.getOverlays().clear();
 
-            drawNearestPoint();
-            drawMyPosition();
+    }
 
-            map.invalidate();
-        }
+    private void drawNearestPointFromMyPosition(GeoPoint myPosition){
+        MyPosition.latitude = myPosition.getLatitude();
+        MyPosition.longitude = myPosition.getLongitude();
 
-        Marker nearPrayerPlaceMarker;
-        public void drawNearestPoint(){
-            PointCalculates pointCalculates = new PointCalculates(prayerPlaceArrayList);
-            pointCalculates.sortPointsFromMyPosition();
-            ArrayList<PrayerPlace> sortedPoints = pointCalculates.prayerPlaceArrayList;
-            PrayerPlace nearPrayerPlace = sortedPoints.get(0);
-            nearPrayerPlaceMarker = generateMarkerFromPrayerPlaceObject(nearPrayerPlace);
-            map.getOverlays().add(nearPrayerPlaceMarker);
+        hideInfoWindowOfAllCustomMarker();
+        map.getOverlays().clear();
 
-            nearPrayerPlaceMarker.setInfoWindow(new MarkerInfoWindow(R.layout.bonuspack_bubble, map));
-            nearPrayerPlaceMarker.showInfoWindow();
+        drawNearestPoint();
+        drawMyPosition();
 
-            nearPrayerPlaceMarker.setOnMarkerClickListener(new OnMarkerClickListener() {
-                @Override
-                public boolean onMarkerClick(Marker marker, MapView mapView) {
-                    String ss = "hi msn";
-                    return true;
-                }
-            });
+        map.invalidate();
+    }
 
-            nearPrayerPlaceMarker.setDraggable(true);
+    CustomMarker nearPrayerPlaceMarker;
+    public void drawNearestPoint(){
+        PointCalculates pointCalculates = new PointCalculates(prayerPlaceArrayList);
+        pointCalculates.sortPointsFromMyPosition();
+        ArrayList<PrayerPlace> sortedPoints = pointCalculates.prayerPlaceArrayList;
+        PrayerPlace nearPrayerPlace = sortedPoints.get(0);
+        nearPrayerPlaceMarker = generateMarkerFromPrayerPlaceObject(nearPrayerPlace);
+        map.getOverlays().add(nearPrayerPlaceMarker);
 
-        }
+        nearPrayerPlaceMarker.setInfoWindow(new MarkerInfoWindow(R.layout.bonuspack_bubble, map));
+        nearPrayerPlaceMarker.showInfoWindow();
 
-        public void drawMyPosition(){
-            Marker myPositionMarker = new CustomMarker(map);
-            myPositionMarker.setDraggable(true);
-            myPositionMarker.setPosition(new GeoPoint(MyPosition.latitude, MyPosition.longitude));
-            map.getOverlays().add(myPositionMarker);
-            myPositionMarker.setOnMarkerDragListener(new OnMarkerDragListener() {
-                @Override
-                public void onMarkerDrag(Marker marker) {
+        nearPrayerPlaceMarker.setOnMarkerClickListener(new Marker.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker, MapView mapView) {
+                String ss = "hi msn";
+                return true;
+            }
+        });
 
-                }
+        nearPrayerPlaceMarker.setDraggable(true);
+    }
 
-                @Override
-                public void onMarkerDragEnd(Marker marker) {
-                    drawNearestPointFromMyPosition(marker.getPosition());
-                }
+    public void drawMyPosition(){
+        CustomMarker myPositionMarker = new CustomMarker(map);
+        myPositionMarker.setDraggable(true);
+        myPositionMarker.setTitle("My position");
+        myPositionMarker.setPosition(new GeoPoint(MyPosition.latitude, MyPosition.longitude));
+        map.getOverlays().add(myPositionMarker);
+        myPositionMarker.setOnMarkerDragListener(new Marker.OnMarkerDragListener() {
+            @Override
+            public void onMarkerDrag(Marker marker) {
 
-                @Override
-                public void onMarkerDragStart(Marker marker) {
+            }
 
-                }
-            });
-        }
+            @Override
+            public void onMarkerDragEnd(Marker marker) {
+                drawNearestPointFromMyPosition(marker.getPosition());
+            }
+
+            @Override
+            public void onMarkerDragStart(Marker marker) {
+
+            }
+        });
     }
 
     public Drawable getMarkerIconFromTypeAndGender(PrayerPlace prayerPlace){

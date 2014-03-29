@@ -1,7 +1,5 @@
 package com.example.MapApp.Main;
 
-import android.content.res.XmlResourceParser;
-import com.example.MapApp.MapActivity;
 import com.example.MapApp.PrayerPlace.Gender;
 import com.example.MapApp.PrayerPlace.PrayerPlace;
 import com.example.MapApp.PrayerPlace.Type;
@@ -15,70 +13,85 @@ import java.util.ArrayList;
  * Created by respect on 3/14/14.
  */
 public class XmlReader {
-    public XmlReader(XmlResourceParser xmlResourceFile){
+    public XmlReader(XmlPullParser xmlResourceFile){
         this.xmlResourceFile = xmlResourceFile;
         prayerPlaceList = new ArrayList<PrayerPlace>();
     }
 
     private ArrayList<PrayerPlace> prayerPlaceList;
-    private XmlResourceParser xmlResourceFile;
-    private int geoPointsCount;
+    public XmlPullParser xmlResourceFile;
 
     public ArrayList<PrayerPlace> getPrayerPlaceList(){
         return prayerPlaceList;
     }
 
-    private void doXppNext(XmlResourceParser xpp, int howMuch) throws IOException, XmlPullParserException {
-        for(int i = 0; i < howMuch; i++){
+    private void doXppNextWhileStartNeedTag(XmlPullParser xpp, String needTag) throws IOException, XmlPullParserException {
+        while(!(xpp.getEventType() == XmlPullParser.START_TAG && xpp.getName().equals(needTag))){
             xpp.next();
         }
     }
 
     public void readPrayerPlaceListFromXML() throws IOException, XmlPullParserException {
-        XmlResourceParser xpp = xmlResourceFile;
+        XmlPullParser xpp = xmlResourceFile;
         int eventType = xpp.getEventType();
         int i = 0;
         while (eventType != XmlPullParser.END_DOCUMENT)
         {
             if(eventType == XmlPullParser.START_TAG && xpp.getName().equals("point"))
             {
-                PrayerPlace prayerPlace = new PrayerPlace();
+                try{
+                    PrayerPlace prayerPlace = new PrayerPlace();
 
-                doXppNext(xpp, 2);
-                String typeString = xpp.getText().trim();
-                prayerPlace.prayerPlaceType = getPrayerPlaceType(typeString);
+                    doXppNextWhileStartNeedTag(xpp, "type");
+                    String typeString = getTextOfXppTag(xpp);
+                    prayerPlace.prayerPlaceType = getPrayerPlaceType(typeString);
 
-                doXppNext(xpp, 3);
-                String genderString = xpp.getText().trim();
-                prayerPlace.prayerPlaceGender = getPrayerPlaceGender(genderString);
+                    doXppNextWhileStartNeedTag(xpp, "gender");
+                    String genderString = getTextOfXppTag(xpp);
+                    prayerPlace.prayerPlaceGender = getPrayerPlaceGender(genderString);
 
-                doXppNext(xpp, 3);
-                String nameString = xpp.getText().trim();
-                prayerPlace.name = nameString;
+                    doXppNextWhileStartNeedTag(xpp, "name");
+                    String nameString = getTextOfXppTag(xpp);
+                    prayerPlace.name = nameString;
 
-                doXppNext(xpp, 3);
-                String descriptionString = xpp.getText().trim();
-                prayerPlace.description = descriptionString;
+                    doXppNextWhileStartNeedTag(xpp, "description");
+                    String descriptionString = getTextOfXppTag(xpp);
+                    prayerPlace.description = descriptionString;
 
-                doXppNext(xpp, 3);
-                String addressString = xpp.getText().trim();
-                prayerPlace.address = addressString;
+                    doXppNextWhileStartNeedTag(xpp, "address");
+                    String addressString = getTextOfXppTag(xpp);
+                    prayerPlace.address = addressString;
 
-                doXppNext(xpp, 3);
-                String latitudeString = xpp.getText().trim();
-                prayerPlace.latitude = Double.parseDouble(latitudeString);
+                    doXppNextWhileStartNeedTag(xpp, "latitude");
+                    String latitudeString = getTextOfXppTag(xpp);
+                    prayerPlace.latitude = Double.parseDouble(latitudeString);
 
-                doXppNext(xpp, 3);
-                String longitudeString = xpp.getText().trim();
-                prayerPlace.longitude = Double.parseDouble(longitudeString);
+                    doXppNextWhileStartNeedTag(xpp, "longitude");
+                    String longitudeString = getTextOfXppTag(xpp);
+                    prayerPlace.longitude = Double.parseDouble(longitudeString);
 
-                doXppNext(xpp, 1);
-                eventType = xpp.next();
+//                    doXppNextWhileStartNeedTag(xpp, "point");
 
-                prayerPlaceList.add(prayerPlace);
+                    prayerPlaceList.add(prayerPlace);
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
             }
             eventType = xpp.next();
         }
+    }
+
+    private String getTextOfXppTag(XmlPullParser xpp){
+        String temp = "";
+        try{
+            xpp.next();
+            temp = xpp.getText().toString().trim();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return temp;
     }
 
     private Gender getPrayerPlaceGender(String genderString) {
@@ -105,27 +118,5 @@ public class XmlReader {
             prayerPlaceType = Type.UNDEFINED;
         }
         return prayerPlaceType;
-    }
-
-    private int setXmlGeoPointsCount () throws XmlPullParserException {
-        XmlResourceParser xpp = xmlResourceFile;
-        int eventType = xpp.getEventType();
-        geoPointsCount = 0;
-        while(eventType != XmlPullParser.END_DOCUMENT){
-            if(eventType == XmlPullParser.START_TAG)
-            {
-                String xpp_name = xpp.getName();
-                if("point".hashCode() == xpp_name.hashCode()){
-                    geoPointsCount++;
-                }
-            }
-        }
-        return geoPointsCount;
-    }
-
-    public int getXmlGeoPointsCount() throws XmlPullParserException {
-        if(geoPointsCount == 0)
-            setXmlGeoPointsCount();
-        return geoPointsCount;
     }
 }

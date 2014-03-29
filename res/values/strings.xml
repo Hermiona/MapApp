@@ -20,4 +20,9 @@
     <string name="type_prayerroom_text">Намазкана</string>
     <string name="list_item_context_menu_show_on_map">Показать на карте</string>
     <string name="options_menu_clear_map">Очистить</string>
+    <string name="options_menu_show_all_markers">Показать все метки</string>
+    <string name="options_menu_get_data_from_server">Обновить данные</string>
+    <string name="no_scores">no results</string>
+    <string name="app_directory_name">MapApp</string>
+    <string name="points_xml_file_name_in_app_dir">geopoints.xml</string>
 </resources>

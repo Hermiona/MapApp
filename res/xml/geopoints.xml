@@ -7,17 +7,8 @@
         <name>Undefined</name>
         <description>Nothing</description>
         <address>ss</address>
-        <pointx>42.8946</pointx>
-        <pointy>74.6079</pointy>
-    </point>
-    <point>
-        <type>mosque</type>
-        <gender>male</gender>
-        <name>Ошский рынок</name>
-        <description>3-этажная мечеть</description>
-        <address>Бейшеналиева-Пушкина</address>
-        <pointx>42.87923</pointx>
-        <pointy>74.57251</pointy>
+        <latitude>42.8946</latitude>
+        <longitude>74.6079</longitude>
     </point>
     <point>
         <type>prayerroom</type>
@@ -25,26 +16,17 @@
         <name>Beta Stores</name>
         <description>4-этаж</description>
         <address>Чуй-Исанова</address>
-        <pointx>42.87611</pointx>
-        <pointy>74.59225</pointy>
+        <latitude>42.87611</latitude>
+        <longitude>74.59225</longitude>
     </point>
     <point>
         <type>mosque</type>
         <gender>joint</gender>
-        <name>Central Mosque</name>
-        <description>Центральная мечеть</description>
+        <name>Центральная</name>
+        <description></description>
         <address>Московская-Горького</address>
-        <pointx>42.86939</pointx>
-        <pointy>74.62152</pointy>
-    </point>
-    <point>
-        <type>mosque</type>
-        <gender>male</gender>
-        <name>Мечеть</name>
-        <description>Ж.Жолу-Правда</description>
-        <address>Ж.Жолу-Правда</address>
-        <pointx>42.88565</pointx>
-        <pointy>74.61538</pointy>
+        <latitude>42.86939</latitude>
+        <longitude>74.62152</longitude>
     </point>
     <point>
         <type>mosque</type>
@@ -52,7 +34,795 @@
         <name>Усман</name>
         <description>конечная 164</description>
         <address>ул. Кустанайская</address>
-        <pointx>42.88327</pointx>
-        <pointy>74.51112</pointy>
+        <latitude>42.88327</latitude>
+        <longitude>74.51112</longitude>
+    </point>
+
+
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Имам Азам</name>
+        <description></description>
+        <address></address>
+        <latitude>42.87549</latitude>
+        <longitude>74.62427</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Махмуд Кашкари</name>
+        <description></description>
+        <address></address>
+        <latitude>42.88048</latitude>
+        <longitude>74.62600</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Абу Бакр Сыддык</name>
+        <description></description>
+        <address></address>
+        <latitude>42.87843</latitude>
+        <longitude>74.63914</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Али арап</name>
+        <description></description>
+        <address></address>
+        <latitude>42.88774</latitude>
+        <longitude>74.63617</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Бакай Ата</name>
+        <description></description>
+        <address></address>
+        <latitude>42.89964</latitude>
+        <longitude>74.64834</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Артыгалы</name>
+        <description></description>
+        <address></address>
+        <latitude>42.88116</latitude>
+        <longitude>74.65664</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Мадина базар</name>
+        <description></description>
+        <address></address>
+        <latitude>42.87083</latitude>
+        <longitude>74.63889</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Илим Марафат</name>
+        <description></description>
+        <address></address>
+        <latitude>42.86882</latitude>
+        <longitude>74.63774</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Ак мечит</name>
+        <description></description>
+        <address></address>
+        <latitude>42.86499</latitude>
+        <longitude>74.64000</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Молдо Саид</name>
+        <description></description>
+        <address></address>
+        <latitude>42.84091</latitude>
+        <longitude>74.63772</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Жетинчи мкр.</name>
+        <description></description>
+        <address></address>
+        <latitude>42.82708</latitude>
+        <longitude>74.62193</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Айша</name>
+        <description></description>
+        <address></address>
+        <latitude>42.81140</latitude>
+        <longitude>74.63695</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Тойба</name>
+        <description>КАСИ</description>
+        <address></address>
+        <latitude>42.83848</latitude>
+        <longitude>74.59789</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Абдуллох Салих</name>
+        <description></description>
+        <address></address>
+        <latitude>42.85139</latitude>
+        <longitude>74.58193</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Джал</name>
+        <description></description>
+        <address></address>
+        <latitude>42.83751</latitude>
+        <longitude>74.56326</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Мат Кабыл уулу</name>
+        <description></description>
+        <address></address>
+        <latitude>42.81486</latitude>
+        <longitude>74.56793</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Мубарак</name>
+        <description></description>
+        <address></address>
+        <latitude>42.82780</latitude>
+        <longitude>74.55154</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Ак Сана</name>
+        <description></description>
+        <address></address>
+        <latitude>42.83785</latitude>
+        <longitude>74.54245</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Шаршен ата</name>
+        <description></description>
+        <address></address>
+        <latitude>42.840996</latitude>
+        <longitude>74.531738</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Саид Эфен</name>
+        <description></description>
+        <address></address>
+        <latitude>42.839368</latitude>
+        <longitude>74.529723</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Нуурул Харамайн</name>
+        <description></description>
+        <address></address>
+        <latitude>42.851798</latitude>
+        <longitude>74.528101</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Хамза</name>
+        <description></description>
+        <address></address>
+        <latitude>42.858434</latitude>
+        <longitude>74.523096</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Абдулла Али</name>
+        <description></description>
+        <address>Кайназарова - Кубаныч</address>
+        <latitude>42.88145</latitude>
+        <longitude>74.53237</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Абдулло ибн Аббас</name>
+        <description>Ошский рынок</description>
+        <address>Бейшеналиева - Пушкина</address>
+        <latitude>42.87904</latitude>
+        <longitude>74.57267</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Асаида Марьям</name>
+        <description>Западный автовокзал</description>
+        <address>Жибек Жолу</address>
+        <latitude>42.88574</latitude>
+        <longitude>74.57098</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Аль Иман</name>
+        <description>Ленинградская - М.Гвардия</description>
+        <address>К.Баялинова - М.Ганди</address>
+        <latitude>42.89388</latitude>
+        <longitude>74.57692</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Көлмө</name>
+        <description></description>
+        <address>Мидина - Жаштык</address>
+        <latitude>42.905624</latitude>
+        <longitude>74.568406</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Ихлас</name>
+        <description>БЧК</description>
+        <address>Ананьева - Наримановская</address>
+        <latitude>42.89787</latitude>
+        <longitude>74.59118</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Ак Босого</name>
+        <description></description>
+        <address></address>
+        <latitude>42.92899</latitude>
+        <longitude>74.59194</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Нур Ислам</name>
+        <description></description>
+        <address>Т.Молдо</address>
+        <latitude>42.90479</latitude>
+        <longitude>74.59723</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Имам Али</name>
+        <description></description>
+        <address>К.Баялинова - Курганская</address>
+        <latitude>42.89267</latitude>
+        <longitude>74.59799</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Мусакан</name>
+        <description></description>
+        <address>Куренкеева - Дзержинского</address>
+        <latitude>42.889791</latitude>
+        <longitude>74.606834</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Муртаза Али</name>
+        <description>Ж.Жолу - Правда</description>
+        <address>Ж.Жолу - Усенбаева</address>
+        <latitude>42.88569</latitude>
+        <longitude>74.61540</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Старый Толчок</name>
+        <description></description>
+        <address>Фере</address>
+        <latitude>42.90667</latitude>
+        <longitude>74.60737</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Мечит</name>
+        <description></description>
+        <address>Керамическая</address>
+        <latitude>42.923918</latitude>
+        <longitude>74.625771</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Салымбек</name>
+        <description>Дордой</description>
+        <address>Ибраимова</address>
+        <latitude>42.93576</latitude>
+        <longitude>74.62285</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Стамкул ата</name>
+        <description>ж/м Келечек</description>
+        <address></address>
+        <latitude>42.94417</latitude>
+        <longitude>74.61648</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Мечит</name>
+        <description></description>
+        <address>Кайназарова - Арзамасская</address>
+        <latitude>42.873224</latitude>
+        <longitude>74.532754</longitude>
+    </point>
+    <point>
+        <type>mosque</type>
+        <gender>male</gender>
+        <name>Имам</name>
+        <description></description>
+        <address>Хан-Тенир - Ашар</address>
+        <latitude>42.84272</latitude>
+        <longitude>74.51813</longitude>
+    </point>
+
+
+
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Чуй - Шопокова</address>
+        <latitude>42.87683</latitude>
+        <longitude>74.61580</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Аянт сүрөттүн аягы</name>
+        <description></description>
+        <address>Чуй - Эркиндик</address>
+        <latitude>42.87687</latitude>
+        <longitude>74.60634</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Парк</name>
+        <description></description>
+        <address></address>
+        <latitude>42.87917</latitude>
+        <longitude>74.60030</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Обувь</name>
+        <description></description>
+        <address>Киев - Эркиндик</address>
+        <latitude>42.87464</latitude>
+        <longitude>74.61039</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Дордой плаза</name>
+        <description></description>
+        <address>Киевская - Правда</address>
+        <latitude>42.87418</latitude>
+        <longitude>74.61802</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>joint</gender>
+        <name>Бета Сторес 1</name>
+        <description>4-этаж</description>
+        <address>Чуй - Исанова</address>
+        <latitude>42.87586</latitude>
+        <longitude>74.59219</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Т.Молдо - Кудрука</address>
+        <latitude>42.88831</latitude>
+        <longitude>74.59651</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Суюмбаева - Никитина</address>
+        <latitude>42.88500</latitude>
+        <longitude>74.62302</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>кафе Жалалабад</name>
+        <description></description>
+        <address>Т.Молдо - Киевская</address>
+        <latitude>42.875190</latitude>
+        <longitude>74.595679</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>кафе Хузур</name>
+        <description>2-этаж</description>
+        <address>Киевская</address>
+        <latitude>42.875209</latitude>
+        <longitude>74.594598</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Ж.Д.Вокзал</name>
+        <description>подвал</description>
+        <address>Эркиндик - Түгөлбай ата</address>
+        <latitude>42.86459</latitude>
+        <longitude>74.60500</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description>Восточный автовокзал</description>
+        <address>Узгенский</address>
+        <latitude>42.88746</latitude>
+        <longitude>74.62654</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>кафе "Фаиза"</name>
+        <description></description>
+        <address>Ж.Жолу - Турусбекова</address>
+        <latitude>42.88421</latitude>
+        <longitude>74.58693</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Дил Мүрөк</name>
+        <description></description>
+        <address>Сыдыкова</address>
+        <latitude>42.87390</latitude>
+        <longitude>74.59440</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Боконбаева - Турусбекова</address>
+        <latitude>42.86777</latitude>
+        <longitude>74.58285</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Беш-Сары</name>
+        <description>2-этаж</description>
+        <address>Киевская - Бейшеналиева</address>
+        <latitude>42.87642</latitude>
+        <longitude>74.57124</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Берекет Гранд</name>
+        <description>Подвал</description>
+        <address>Чуй - Павлова</address>
+        <latitude>42.87687</latitude>
+        <longitude>74.56779</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Ош базар</name>
+        <description>Подвал</description>
+        <address>Бейшеналиева</address>
+        <latitude>42.87491</latitude>
+        <longitude>74.57116</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Дордой Маркет</name>
+        <description>Шлагбаум</description>
+        <address>Д.Сяопина - Интергельпо</address>
+        <latitude>42.87809</latitude>
+        <longitude>74.55888</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Л.Толстого</address>
+        <latitude>42.86581</latitude>
+        <longitude>74.56438</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address></address>
+        <latitude>42.88139</latitude>
+        <longitude>74.54172</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Астраханская - Камчатская</address>
+        <latitude>42.87187</latitude>
+        <longitude>74.50483</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Хазрети Умар</name>
+        <description></description>
+        <address>Асаналиев - Тыныбекова</address>
+        <latitude>42.86025</latitude>
+        <longitude>74.56939</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>кафе "Кара-Суу"</name>
+        <description>Правое крыло. подвал</description>
+        <address>Асаналиева</address>
+        <latitude>42.860786</latitude>
+        <longitude>74.569007</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>кафе "Адиш ата"</name>
+        <description>Главный вход. комната на левой стороне</description>
+        <address>Асаналиева - Л.Толстого</address>
+        <latitude>42.86528</latitude>
+        <longitude>74.56907</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Абдурахим</name>
+        <description>2-этажный дом. 1-этаж</description>
+        <address>Садыгалиева - Власова</address>
+        <latitude>42.87597</latitude>
+        <longitude>74.52166</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Репина</address>
+        <latitude>42.86396</latitude>
+        <longitude>74.55037</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Абу Бакр</name>
+        <description></description>
+        <address>Тыналиева</address>
+        <latitude>42.84306</latitude>
+        <longitude>74.56785</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Каусар</name>
+        <description></description>
+        <address></address>
+        <latitude>42.85135</latitude>
+        <longitude>74.56790</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Фирдаус контейнер</name>
+        <description></description>
+        <address>Баха - Ю.Магистраль</address>
+        <latitude>42.83012</latitude>
+        <longitude>74.56464</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>ул. Ак-туз</address>
+        <latitude>42.84277</latitude>
+        <longitude>74.55040</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Насият нур</name>
+        <description></description>
+        <address>ул. 12</address>
+        <latitude>42.81314</latitude>
+        <longitude>74.56064</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Мустафа</name>
+        <description></description>
+        <address>ул. 16</address>
+        <latitude>42.81661</latitude>
+        <longitude>74.55212</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address></address>
+        <latitude>42.80482</latitude>
+        <longitude>74.56638</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address></address>
+        <latitude>42.81700</latitude>
+        <longitude>74.55932</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>ул. Молдо Нияз</address>
+        <latitude>42.85999</latitude>
+        <longitude>74.51328</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>ул. Абая</address>
+        <latitude>42.85502</latitude>
+        <longitude>74.60230</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>VEFA</name>
+        <description></description>
+        <address>Советская - Горького</address>
+        <latitude>42.85730</latitude>
+        <longitude>74.60984</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Лион напротив</name>
+        <description></description>
+        <address></address>
+        <latitude>42.83543</latitude>
+        <longitude>74.61798</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>joint</gender>
+        <name>Бета Сторес 2</name>
+        <description></description>
+        <address>Юнусалиева</address>
+        <latitude>42.83139</latitude>
+        <longitude>74.62138</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address></address>
+        <latitude>42.83446</latitude>
+        <longitude>74.62719</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Ахунбаева</address>
+        <latitude>42.84217</latitude>
+        <longitude>74.62833</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>ул. Кок-Жар</address>
+        <latitude>42.84853</latitude>
+        <longitude>74.63638</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address></address>
+        <latitude>42.85041</latitude>
+        <longitude>74.64806</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description>рынок Баят</description>
+        <address></address>
+        <latitude>42.90102</latitude>
+        <longitude>74.57359</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address></address>
+        <latitude>42.91151</latitude>
+        <longitude>74.60413</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Намазкана</name>
+        <description></description>
+        <address>Витебская - Ак-Шоокум</address>
+        <latitude>42.91083</latitude>
+        <longitude>74.60925</longitude>
+    </point>
+    <point>
+        <type>prayerroom</type>
+        <gender>male</gender>
+        <name>Икром</name>
+        <description></description>
+        <address>ул. Баха</address>
+        <latitude>42.85923</latitude>
+        <longitude>74.56007</longitude>
     </point>
 </points>
