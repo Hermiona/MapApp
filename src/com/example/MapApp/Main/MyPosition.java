@@ -1,5 +1,7 @@
 package com.example.MapApp.Main;
 
+import org.osmdroid.util.GeoPoint;
+
 /**
  * Created by respect on 3/14/14.
  */
@@ -16,5 +18,9 @@ public class MyPosition implements Point{
     @Override
     public double getLongitude() {
         return longitude;
+    }
+
+    public static GeoPoint getMyPositionGeoPoint(){
+        return new GeoPoint(latitude, longitude);
     }
 }

@@ -1,13 +1,19 @@
 package com.example.MapApp;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MotionEvent;
+import android.view.*;
+import android.widget.AbsListView;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 import com.example.MapApp.Main.MyPosition;
 import com.example.MapApp.Main.PointCalculates;
 import com.example.MapApp.Main.XmlReader;
@@ -26,11 +32,14 @@ public class MapActivity extends Activity {
 
     public static MapView map;
     public ArrayList<PrayerPlace> prayerPlaceArrayList;
+    boolean gpsNavigation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        gpsNavigation = false;
 
         createMapViewAndSetParameters();
         readPointsFromXml();
@@ -51,6 +60,16 @@ public class MapActivity extends Activity {
         }
 
         map.invalidate();
+
+//        final ImageView gps_icon = (ImageView)findViewById(R.id.gps_icon);
+////        gps_icon.setImageDrawable(getResources().getDrawable(R.drawable.gps_off));
+//        gps_icon.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                gps_icon.setImageDrawable(getResources().getDrawable(R.drawable.gps_on));
+//            }
+//        });
+
 
     }
 
@@ -85,6 +104,7 @@ public class MapActivity extends Activity {
             hideInfoWindowOfAllCustomMarker();
             map.getOverlays().clear();
             drawMyPosition();
+            map.invalidate();
         } else if(item.getTitle().equals(getString(R.string.options_menu_show_all_markers))){
             drawMarkersOnMap(prayerPlaceArrayList);
         } else {
@@ -105,6 +125,35 @@ public class MapActivity extends Activity {
     }
 
     public void createMapViewAndSetParameters(){
+        final ImageView gpsIcon = new ImageView(this);
+        gpsIcon.setImageDrawable((gpsNavigation)?getResources().getDrawable(R.drawable.gps_on):getResources().getDrawable(R.drawable.gps_off));
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+        gpsIcon.setPadding(10, 0, 0, 10);
+        gpsIcon.setMinimumWidth(50);
+        gpsIcon.setMinimumHeight(50);
+        gpsIcon.setLayoutParams(layoutParams);
+        gpsIcon.setOnClickListener(new View.OnClickListener() {
+            LocationManager mLocManager;
+            LocationListener mlocListener;
+            @Override
+            public void onClick(View view) {
+                gpsNavigation = !gpsNavigation;
+                gpsIcon.setImageDrawable((gpsNavigation)?getResources().getDrawable(R.drawable.gps_on):getResources().getDrawable(R.drawable.gps_off));
+                if(gpsNavigation){
+                    mLocManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+                    mlocListener = new MapAppLocationListener();
+                    mLocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, mlocListener);
+                    mLocManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, mlocListener);
+                } else {
+                    mLocManager.removeUpdates(mlocListener);
+                    mLocManager = null;
+                }
+            }
+        });
+
         final RelativeLayout relativeLayout = new RelativeLayout(this); // разметка
         map = new MapView(this, 256); // наша карта
 
@@ -113,6 +162,7 @@ public class MapActivity extends Activity {
         // добавим карту в разметку
         relativeLayout.addView(map, new RelativeLayout.LayoutParams(MapView.LayoutParams.FILL_PARENT,
                 MapView.LayoutParams.FILL_PARENT));
+        relativeLayout.addView(gpsIcon);
         setContentView(relativeLayout);
         map.setUseDataConnection(true);
         map.setClickable(true);
@@ -247,5 +297,56 @@ public class MapActivity extends Activity {
         }
         drawableIcon = getResources().getDrawable(iconId);
         return drawableIcon;
+    }
+
+
+
+
+    public class MapAppLocationListener implements LocationListener {
+
+
+        @Override
+        public void onLocationChanged(Location loc) {
+             MyPosition.latitude = loc.getLatitude();
+            MyPosition.longitude = loc.getLongitude();
+
+            String Text =
+            "Latitude = " + loc.getLatitude() + "\n" +
+            "Longitude = " + loc.getLongitude();
+
+            Toast.makeText( getApplicationContext(),
+                    Text,
+                    Toast.LENGTH_SHORT).show();
+
+            if(!gpsNavigation)
+                return;
+
+            drawMyPosition();
+            drawNearestPointFromMyPosition(MyPosition.getMyPositionGeoPoint());
+        }
+
+        @Override
+        public void onStatusChanged(String s, int i, Bundle bundle) {
+
+            Toast.makeText(getApplicationContext(),
+                    "Gps status changed",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onProviderEnabled(String s) {
+
+            Toast.makeText(getApplicationContext(),
+                    "Gps Enabled",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onProviderDisabled(String s) {
+
+            Toast.makeText(getApplicationContext(),
+                    "Gps Disabled",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 }
